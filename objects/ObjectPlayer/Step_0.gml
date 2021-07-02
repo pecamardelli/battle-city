@@ -33,14 +33,17 @@ hspeed = _speed * cos(image_angle*pi/180);
 if (image_angle > 360) image_angle -= 360;
 if (image_angle < 0) image_angle = 360 + image_angle;
 
+if (x < sprite_get_width(sprite_index)*image_xscale/2) x = sprite_get_width(sprite_index)*image_xscale/2;
+if (x > room_width - sprite_get_width(sprite_index)*image_xscale/2) x = room_width - sprite_get_width(sprite_index)*image_xscale/2;
+if (y < sprite_get_height(sprite_index)*image_yscale/2 + global.wallThickness) y = sprite_get_height(sprite_index)*image_yscale/2 + global.wallThickness;
+if (y > room_height - global.wallThickness - sprite_get_height(sprite_index)*image_yscale/2) y = room_height - global.wallThickness - sprite_get_height(sprite_index)*image_yscale/2;
+
 if (keyboard_check(keyButton1)) {
 	var shots = 0;
 	with (ObjectShot) {
 		if (parent == other.id) shots++;	
 	}
-	
-	show_debug_message(string(current_time));
-	
+		
 	if (shots < tank.maxBurst && (current_time - shotTimeStamp) >= tank.burstInterval) {
 		var shot = instance_create_depth(x,y,depth+1,ObjectShot);
 		shot.parent			= id;

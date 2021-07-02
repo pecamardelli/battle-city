@@ -1,5 +1,5 @@
 /// @description Insert description here
-
+randomize();
 global.tanks	= [
 	new Tank(SpriteTank01,3,0.1,2,undefined,1,1000)
 ];

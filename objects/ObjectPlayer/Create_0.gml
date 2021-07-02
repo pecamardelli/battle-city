@@ -1,14 +1,16 @@
 /// @description Insert description here
 
-visible	= false;
-image_xscale = 0.3;
-image_yscale = 0.3;
+visible			= false;
+image_xscale	= 0.3;
+image_yscale	= 0.3;
+image_angle		= 90;
 
-lives	= 3;
-health	= 100;
-score	= 0;
-tank	= global.tanks[0];
-_speed	= 0;
+lives			= 3;
+health			= 100;
+score			= 0;
+tank			= global.tanks[0];
+_speed			= 0;
+shotTimeStamp	= 0;
 
 keyLeft		= 65;	// a
 keyRight	= 68;	// d

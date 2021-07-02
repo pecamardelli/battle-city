@@ -4,31 +4,28 @@ if (keyboard_check(keyUp)) {
 	if(abs(90-image_angle) < 180) var turnSpeed = tank.turnSpeed;
 	else var turnSpeed = -tank.turnSpeed;
 	image_angle	= approach(image_angle,90,turnSpeed);
-	_speed = approach(speed,tank.speed,0.1);
 }
 
 if (keyboard_check(keyDown)) {
 	if(abs(270-image_angle) < 180) var turnSpeed = tank.turnSpeed;
 	else var turnSpeed = -tank.turnSpeed;
 	image_angle	= approach(image_angle,270,turnSpeed);
-	_speed = approach(speed,tank.speed,0.1);
 }
 
 if (keyboard_check(keyLeft)) {
 	if(abs(180-image_angle) < 180) var turnSpeed = tank.turnSpeed;
 	else var turnSpeed = -tank.turnSpeed;
 	image_angle	= approach(image_angle,180,turnSpeed);
-	_speed = approach(speed,tank.speed,0.1);
 }
 
 if (keyboard_check(keyRight)) {
 	if(abs(360-image_angle) < 180) var turnSpeed = tank.turnSpeed;
 	else var turnSpeed = -tank.turnSpeed;
 	image_angle	= approach(image_angle,360,turnSpeed);
-	_speed = approach(speed,tank.speed,0.1);
 }
 
-if (keyboard_check(false)) _speed = approach(_speed,0,0.1);
+if (keyboard_check(keyButton2)) _speed = approach(_speed,tank.speed,0.1);
+else _speed = approach(_speed,0,0.1);
 
 vspeed = _speed * (-sin(image_angle*pi/180));
 hspeed = _speed * cos(image_angle*pi/180);
@@ -37,9 +34,20 @@ if (image_angle > 360) image_angle -= 360;
 if (image_angle < 0) image_angle = 360 + image_angle;
 
 if (keyboard_check(keyButton1)) {
-	var shot = instance_create_depth(x,y,depth+1,ObjectShot);
-	shot.sprite_index = SpriteBullet;
-	shot.vspeed = sign(vspeed) * 10;
-	shot.hspeed = sign(hspeed) * 10;
-	shot.image_angle = image_angle;
+	var shots = 0;
+	with (ObjectShot) {
+		if (parent == other.id) shots++;	
+	}
+	
+	show_debug_message(string(current_time));
+	
+	if (shots < tank.maxBurst && (current_time - shotTimeStamp) >= tank.burstInterval) {
+		var shot = instance_create_depth(x,y,depth+1,ObjectShot);
+		shot.parent			= id;
+		shot.sprite_index	= SpriteBullet;
+		shot.vspeed			= 10 * (-sin(image_angle*pi/180));
+		shot.hspeed			= 10 * cos(image_angle*pi/180);
+		shot.image_angle	= image_angle - 90;
+		shotTimeStamp		= current_time;
+	}
 }

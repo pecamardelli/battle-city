@@ -1,10 +1,29 @@
 /// @description Insert description here
 randomize();
 global.tanks	= [
-	new Tank(SpriteTank01,3,0.1,2,undefined,1,1000)
+	new Tank(SpriteTank01,2,0.1,2,undefined,10,100)
 ];
 
-global.player1	= instance_create_depth(room_width/2,room_height-100,0,ObjectPlayer);
-global.player1.sprite_index	= global.player1.tank.sprite;
-
 global.wallThickness = 10;
+
+global.player1Keys = {
+	keyLeft: 65,
+	keyRight: 68,
+	keyUp: 87,
+	keyDown: 83,
+
+	keyButton1: 100,
+	keyButton2: 101,
+	keyButton3: 103,
+	keyButton4: 104,
+	
+	keyStart: undefined,
+	keySelect: undefined,
+	
+	keyR1: undefined,
+	keyR2: undefined,
+	keyR3: undefined,
+	keyL1: undefined,
+	keyL2: undefined,
+	keyL3: undefined
+}

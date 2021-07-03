@@ -6,3 +6,6 @@ if (
 	y < -100 ||
 	y > room_height + 100
 ) instance_destroy();
+
+
+if (exploding && image_index == image_number-1) instance_destroy();

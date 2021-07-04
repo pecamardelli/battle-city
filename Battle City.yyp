@@ -27,6 +27,7 @@
     {"id":{"name":"SpriteMenuOne","path":"sprites/SpriteMenuOne/SpriteMenuOne.yy",},"order":0,},
     {"id":{"name":"RoomBattleField","path":"rooms/RoomBattleField/RoomBattleField.yy",},"order":2,},
     {"id":{"name":"SpriteRock","path":"sprites/SpriteRock/SpriteRock.yy",},"order":0,},
+    {"id":{"name":"ai_engage_target","path":"scripts/ai_engage_target/ai_engage_target.yy",},"order":2,},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},"order":0,},
     {"id":{"name":"ObjectBattleField","path":"objects/ObjectBattleField/ObjectBattleField.yy",},"order":2,},
     {"id":{"name":"RoomSelectTank","path":"rooms/RoomSelectTank/RoomSelectTank.yy",},"order":1,},

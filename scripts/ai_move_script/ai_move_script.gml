@@ -5,17 +5,51 @@ function ai_move_script(){
 	
 	var wallDistance = 80;
 	
-	if (x < wallDistance) toImageAngle = irandom_range(190,350); moveScript = ai_turn_around;
-	if (x > room_width - wallDistance) toImageAngle = irandom_range(10,170); moveScript = ai_turn_around;
-	if (y < wallDistance) toImageAngle = irandom_range(100,260); moveScript = ai_turn_around;
-	if (y > room_height - wallDistance) toImageAngle = irandom_range(-80,80); moveScript = ai_turn_around;
+	if (x < wallDistance) {
+		if (image_angle < 90) {
+			toImageAngle = irandom_range(270,360);
+			turn = 1;
+		}
+		else if (image_angle > 90 && image_angle <= 180) {
+			toImageAngle = irandom_range(180,270);
+			turn = -1;
+		}
+		moveScript = ai_turn_around;
+	}
 	
-	var nearestRock			= instance_nearest(x,y,ObjectRock);
-	var nearestRockDistance = distance_to_object(nearestRock);
-	var rockDirection		= point_direction(x,y,nearestRock.x,nearestRock.y);
-	if (nearestRockDistance < 40) {
-		
-		if (rockDirection < 0) keyLeft = true;
-		else keyRight = true;
+	if (x > room_width - wallDistance) {
+		if (image_angle > 270) {
+			toImageAngle = irandom_range(0,90);
+			turn = -1;
+		}
+		else if (image_angle > 180 && image_angle <= 270) {
+			toImageAngle = irandom_range(90,180);
+			turn = 1;
+		}
+		moveScript = ai_turn_around;
+	}
+	
+	if (y < wallDistance) {
+		if (image_angle < 90) {
+			toImageAngle = irandom_range(90,180);
+			turn = 1;
+		}
+		else if (image_angle > 270) {
+			toImageAngle = irandom_range(180,270);
+			turn = -1;
+		}
+		moveScript = ai_turn_around;
+	}
+	
+	if (y > room_height - wallDistance) {
+		if (image_angle > 90 && image_angle < 180) {
+			toImageAngle = irandom_range(0,90);
+			turn = -1;
+		}
+		else if (image_angle >= 180 && image_angle < 270) {
+			toImageAngle = irandom_range(270,360);
+			turn = 1;
+		}
+		moveScript = ai_turn_around;
 	}
 }

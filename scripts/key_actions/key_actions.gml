@@ -41,14 +41,12 @@ function key_actions(){
 
 	if (keyFire2) {
 		var shots = 0;
-		with (ObjectShot) {
-			if (creator == other.id) shots++;	
-		}
+		with (ObjectShot) if (creator == other.id) shots++;
 		
 		if (shots < vehicle.maxBurst && (current_time - shotTimeStamp) >= vehicle.burstInterval) {
 			var angle = image_angle + random_range(-1,1);
 			var shot = instance_create_depth(x,y,-101,ObjectShot);
-			shot.creator			= id;
+			shot.creator		= id;
 			shot.sprite_index	= SpriteBullet;
 			shot.vspeed			= 10 * -cos(angle*pi/180);
 			shot.hspeed			= 10 * -sin(angle*pi/180);

@@ -1,3 +1,5 @@
 /// @description Insert description here
 
-//show_debug_message(keyboard_key);
+init_keys();
+get_keys();
+key_actions();

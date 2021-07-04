@@ -6,18 +6,15 @@ function init_keys(){
 	keyUp		= false;
 	keyDown		= false;
 
-	keyButton1	= false;
-	keyButton2	= false;
-	keyButton3	= false;
-	keyButton4	= false;
+	keyFire1	= false;
+	keyFire2	= false;
+	keyFire3	= false;
+	keyFire4	= false;
 	
 	keyStart	= false;
 	keySelect	= false;
 	
-	keyR1		= false;
-	keyR2		= false;
-	keyR3		= false;
-	keyL1		= false;
-	keyL2		= false;
-	keyL3		= false;
+	keyAccel	= false;
+	keyBrake	= false;
+	keyReverse	= false;
 }

@@ -38,7 +38,7 @@ if(height == maxHeight){
 			_buttons[n].sprite_index	= spr_button_black_150x30;
 			_buttons[n].caption			= buttons[n].caption;
 			_buttons[n].hoverText		= _buttons[n].caption;
-			_buttons[n].parent			= id;
+			_buttons[n].creator			= id;
 			_buttons[n].onClickAction	= buttons[n].onClickAction;
 		}
 		buttons = undefined;

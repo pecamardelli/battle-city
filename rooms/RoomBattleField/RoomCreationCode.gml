@@ -1,8 +1,16 @@
 instance_create_depth(0,0,0,ObjectBattleField);
 
-player1			= instance_create_depth(room_width/2,room_height-100,-100,ObjectVehicle);
-player1.tank	= global.tanks[0];
-player1.sprite_index	= player1.tank.sprite;
+player1			= instance_create_depth(room_width/2,room_height-100,-100,ObjectPlayer);
+player1.vehicle	= global.tanks[irandom(array_length(global.tanks)-1)];
+player1.sprite_index	= player1.vehicle.sprite;
+player1.keys			= global.player1Keys;
+player1.moveScript		= get_keys;
+
+enemy				= instance_create_depth(room_width*0.9,50,-100,ObjectEnemy);
+enemy.vehicle		= global.tanks[irandom(array_length(global.tanks)-1)];
+enemy.sprite_index	= enemy.vehicle.sprite;
+enemy.moveScript	= ai_move_script;
+enemy.image_angle	= 180;
 
 var rocks = irandom_range(irandom_range(10,15),irandom_range(20,30));
 
@@ -19,7 +27,6 @@ for (var i=0;i<rocks;i++){
 	rock.image_angle	= irandom(360);
 }
 
-
 var plants = irandom_range(irandom_range(15,25), irandom_range(30,60));
 
 for (var i=0;i<plants;i++){
@@ -35,5 +42,5 @@ for (var i=0;i<plants;i++){
 	plant.image_yscale	= random_range(0.2,1);
 	plant.image_angle	= irandom(360);
 	plant.image_blend	= merge_color(c_white,c_dkgrey,random(1));
-	plant.image_alpha	= random(1);
+	plant.image_alpha	= random_range(0.4,0.7);
 }

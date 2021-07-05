@@ -31,26 +31,27 @@ function key_actions(){
 	vspeed = _speed * -cos(image_angle*pi/180);
 	hspeed = _speed * -sin(image_angle*pi/180);
 
-	if (image_angle > 360) image_angle -= 360;
-	if (image_angle < 0) image_angle = 360 + image_angle;
+	if (image_angle > 360) image_angle = 0;
+	if (image_angle < 0) image_angle = 360;
 
 	if (x < sprite_get_width(sprite_index)*image_xscale/2) x = sprite_get_width(sprite_index)*image_xscale/2;
 	if (x > room_width - sprite_get_width(sprite_index)*image_xscale/2) x = room_width - sprite_get_width(sprite_index)*image_xscale/2;
 	if (y < sprite_get_height(sprite_index)*image_yscale/2 + global.wallThickness) y = sprite_get_height(sprite_index)*image_yscale/2 + global.wallThickness;
 	if (y > room_height - global.wallThickness - sprite_get_height(sprite_index)*image_yscale/2) y = room_height - global.wallThickness - sprite_get_height(sprite_index)*image_yscale/2;
 
-	if (keyFire2) {
+	if (keyFire2 && !is_undefined(shotObject)) {
 		var shots = 0;
-		with (ObjectShot) if (creator == other.id) shots++;
+		with (shotObject) if (creator == other.id) shots++;
 		
 		if (shots < vehicle.maxBurst && (current_time - shotTimeStamp) >= vehicle.burstInterval) {
 			var angle = image_angle + random_range(-1,1);
-			var shot = instance_create_depth(x,y,-101,ObjectShot);
+			var shot = instance_create_depth(x,y,-101,shotObject);
 			shot.creator		= id;
-			shot.sprite_index	= SpriteBullet;
-			shot.vspeed			= 10 * -cos(angle*pi/180);
-			shot.hspeed			= 10 * -sin(angle*pi/180);
+			shot.sprite_index	= vehicle.ammo.sprite;
+			shot.vspeed			= vehicle.ammo.speed * -cos(angle*pi/180);
+			shot.hspeed			= vehicle.ammo.speed * -sin(angle*pi/180);
 			shot.image_angle	= angle;
+			shot.hp				= vehicle.ammo.hp;
 			shotTimeStamp		= current_time;
 		}
 	}

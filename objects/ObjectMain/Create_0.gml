@@ -1,11 +1,28 @@
 /// @description Insert description here
 randomize();
 
+global.ammo	= [
+	new Ammo(SpriteAmmo01,10,8,c_white),
+	new Ammo(SpriteAmmo01,10,10,c_dkgray),
+	new Ammo(SpriteAmmo02,35,12,c_white),
+	new Ammo(SpriteAmmo02,40,14,c_yellow),
+];
+
 global.tanks	= [
-	new Tank(SpriteTank01,2,0.1,2,undefined,2,300),
-	new Tank(SpriteTank02,2.3,0.12,2.3,undefined,3,150),
-	new Tank(SpriteTank03,1.8,0.1,1.5,undefined,5,100),
-	new Tank(SpriteTank04,2.1,0.11,2.5,undefined,3,80)
+	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],2,300,50),
+	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],3,200,120),
+	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,150,150),
+	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,350,200)
+];
+
+global.explosions = [
+	SpriteExplosion01,
+	SpriteExplosion02
+];
+
+global.flames = [
+	SpriteFlames01,
+	//SpriteFlames02
 ];
 
 global.wallThickness = 10;

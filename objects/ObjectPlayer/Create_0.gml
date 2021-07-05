@@ -4,7 +4,7 @@ image_xscale	= 0.3;
 image_yscale	= 0.3;
 
 lives			= 3;
-health			= 100;
+hp			= 100;
 score			= 0;
 vehicle			= undefined;
 moveScript		= undefined;
@@ -13,3 +13,4 @@ _speed			= 0;
 shotTimeStamp	= 0;
 
 toImageAngle	= 0;
+shotObject		= ObjectPlayerShot;

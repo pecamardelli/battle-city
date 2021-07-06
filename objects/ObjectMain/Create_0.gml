@@ -22,10 +22,10 @@ global.explosions = [
 
 global.flames = [
 	SpriteFlames01,
-	//SpriteFlames02
+	SpriteFlames02
 ];
 
-global.wallThickness = 10;
+global.stageVehicleNumber = irandom_range(15,20);
 
 global.player1Keys = {
 	keyLeft: 65,

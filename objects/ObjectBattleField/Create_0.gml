@@ -1,8 +1,7 @@
 /// @description Insert description here
+sprite_index	= SpriteGround;
+image_index		= irandom(sprite_get_number(sprite_index)-1);
+image_alpha		= 0.3;
+image_blend		= c_grey;
 
-instance_create_depth(
-	irandom(room_width - global.wallThickness * 2),
-	irandom(room_height - global.wallThickness * 2),
-	-100,
-	ObjectRock
-);
+alarm_set(0,3);

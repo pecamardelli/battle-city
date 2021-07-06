@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Assets",
-    "path": "folders/Objects/Assets.yy",
+    "name": "Environment",
+    "path": "folders/Objects/Assets/Environment.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectPlant",

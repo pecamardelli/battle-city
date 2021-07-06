@@ -1,22 +1,11 @@
 instance_create_depth(0,0,0,ObjectBattleField);
 
-player1			= instance_create_depth(room_width/2,room_height-100,-100,ObjectPlayer);
-player1.vehicle	= global.tanks[irandom(array_length(global.tanks)-1)];
+player1					= instance_create_depth(room_width/2,room_height-100,-100,ObjectPlayer);
+player1.vehicle			= global.tanks[irandom(array_length(global.tanks)-1)];
 player1.sprite_index	= player1.vehicle.sprite;
 player1.hp				= player1.vehicle.hp;
 player1.keys			= global.player1Keys;
 player1.moveScript		= get_keys;
-
-enemy				= instance_create_depth(room_width*0.9,50,-100,ObjectEnemy);
-enemy.vehicle		= global.tanks[irandom(array_length(global.tanks)-1)];
-enemy.sprite_index	= enemy.vehicle.sprite;
-enemy.moveScript	= ai_move_script;
-enemy.image_angle	= 180;
-enemy.image_blend	= c_grey;
-enemy.vehicle.speed		*= random_range(0.5,0.65); 
-enemy.vehicle.accel		*= random_range(0.5,0.65);
-enemy.vehicle.turnSpeed	*= random_range(0.5,0.65);
-enemy.hp				= enemy.vehicle.hp;
 
 var rocks = irandom_range(irandom_range(10,15),irandom_range(20,80));
 
@@ -24,7 +13,7 @@ for (var i=0;i<rocks;i++) {
 	var rock = instance_create_depth(
 		irandom_range(room_width*0.07, room_width*0.93),
 		irandom_range(room_height*0.1,room_height*0.9),
-		-100,
+		-10,
 		ObjectRock
 	);
 	rock.image_index	= irandom(image_number-1);
@@ -39,7 +28,7 @@ for (var i=0;i<plants;i++){
 	var plant = instance_create_depth(
 		irandom_range(room_width*0.05, room_width*0.95),
 		irandom_range(room_height*0.05,room_height*0.95),
-		-100,
+		-10,
 		ObjectPlant
 	);
 	plant.sprite_index	= SpritePlants;

@@ -6,7 +6,7 @@ function ai_engage_target(){
 	else targetDirection -= 90;
 	
 	if (abs(angle_difference(image_angle, targetDirection)) < 0.5) image_angle = targetDirection;
-	else image_angle = approach(image_angle, targetDirection, vehicle.turnSpeed);
+	else image_angle = approach(image_angle, targetDirection, vehicle.turnSpeed * specMultiplier);
 	
 	if (abs(angle_difference(image_angle, targetDirection)) < 10) keyFire2 = true;
 }

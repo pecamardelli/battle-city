@@ -34,10 +34,22 @@ function key_actions(){
 	if (image_angle > 360) image_angle = 0;
 	if (image_angle < 0) image_angle = 360;
 
-	if (x < 30) x = 30;
-	if (x > room_width - 30) x = room_width - 30;
-	if (y < 30) y = 30;
-	if (y > room_height - 30) y = room_height - 30;
+	if (x < 30) {
+		image_angle += vehicle.turnSpeed * specMultiplier * -sign(cos(image_angle*pi/180)) - 0.01;
+		x = 30;
+	}
+	if (x > room_width - 30) {
+		image_angle += vehicle.turnSpeed * specMultiplier * sign(cos(image_angle*pi/180)) + 0.01;
+		x = room_width - 30;
+	}
+	if (y < 30) {
+		image_angle += vehicle.turnSpeed * specMultiplier * sign(sin(image_angle*pi/180)) + 0.01;
+		y = 30;
+	}
+	if (y > room_height - 30) {
+		image_angle += vehicle.turnSpeed * specMultiplier * -sign(sin(image_angle*pi/180)) - 0.01;
+		y = room_height - 30;
+	}
 	
 	if (keyFire2 && !is_undefined(shotObject)) {
 		var shots = 0;

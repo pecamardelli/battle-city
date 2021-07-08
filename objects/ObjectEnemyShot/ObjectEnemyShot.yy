@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shots",
-    "path": "folders/Objects/Assets/Shots.yy",
+    "path": "folders/Objects/Shots.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectEnemyShot",

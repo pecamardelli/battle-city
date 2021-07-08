@@ -21,3 +21,9 @@ toBlendAmount	= 1;
 
 if (random(100) < 50) hasPrize = true;
 else hasPrize = false;
+
+lastX		= x;
+lastY		= y;
+pointToGo	= get_random_point();
+alarm_set(0,room_speed*3);
+alarm_set(1,room_speed*5);

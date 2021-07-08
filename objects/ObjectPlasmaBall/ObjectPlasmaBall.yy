@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "General",
-    "path": "folders/Objects/Assets/General.yy",
+    "path": "folders/Objects/General.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectPlasmaBall",

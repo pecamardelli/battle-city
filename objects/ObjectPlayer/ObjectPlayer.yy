@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Assets",
-    "path": "folders/Objects/Assets.yy",
+    "name": "Players",
+    "path": "folders/Objects/Players.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectPlayer",

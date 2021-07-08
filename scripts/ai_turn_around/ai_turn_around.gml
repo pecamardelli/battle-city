@@ -2,9 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ai_turn_around(){
 	keyAccel = true;
-	direction = approach(direction,toImageAngle,vehicle.turnSpeed * turn);
-	if (
-		sin(direction*pi/180) == sin(toImageAngle*pi/180) &&
-		cos(direction*pi/180) == cos(toImageAngle*pi/180)
-	) moveScript = ai_move_script;
+	direction = approach(direction,toDirection,vehicle.turnSpeed * specMultiplier);
+	if (direction >= toDirection) {
+		moveScript = ai_move_script;
+		pointToGo = get_random_point();
+	}
 }

@@ -11,10 +11,12 @@ if (enabled) {
 	nearestTarget = instance_nearest(x,y,ObjectPlayer);
 	if (nearestTarget != noone) {
 		var nearestTargetDistance = point_distance(x,y,nearestTarget.x,nearestTarget.y);
-		if (nearestTargetDistance < 500) ai_engage_target();
+		var angleDifference = abs(angle_difference(direction, point_direction(x,y,nearestTarget.x,nearestTarget.y)));
+		if (nearestTargetDistance <= vehicle.engageDistance && angleDifference <= vehicle.engageMaxAngle/2) ai_engage_target();
+		else moveScript();
 	}
-
-	moveScript();
+	else moveScript();
+	
 	key_actions();
 }
 
@@ -26,3 +28,5 @@ if (hasPrize) {
 }
 
 image_angle = direction;
+
+stay_in_room_bounds();

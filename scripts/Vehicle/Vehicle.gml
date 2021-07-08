@@ -1,6 +1,17 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function Vehicle(_sprite,_speed,_accel,_turnSpeed,_ammo,_maxBurst,_burstInterval,_hp) constructor {
+function Vehicle(
+	_sprite,
+	_speed,
+	_accel,
+	_turnSpeed,
+	_ammo,
+	_maxBurst,
+	_burstInterval,
+	_hp,
+	_engageDistance,
+	_engageMaxAngle
+) constructor {
 	sprite			= _sprite;
 	speed			= _speed;
 	accel			= _accel;
@@ -8,5 +19,7 @@ function Vehicle(_sprite,_speed,_accel,_turnSpeed,_ammo,_maxBurst,_burstInterval
 	ammo			= _ammo;
 	maxBurst		= _maxBurst;
 	burstInterval	= _burstInterval;
-	hp				= _hp
+	hp				= _hp;
+	engageDistance	= _engageDistance;
+	engageMaxAngle	= _engageMaxAngle;
 }

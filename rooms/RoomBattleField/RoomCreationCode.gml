@@ -20,7 +20,7 @@ for (var i=0;i<rocks;i++) {
 	rock.image_index	= irandom(image_number-1);
 	rock.image_xscale	= random_range(0.2,0.5);
 	rock.image_yscale	= random_range(0.2,0.5);
-	rock.direction	= irandom(360);
+	rock.image_angle	= irandom(360);
 }
 
 var plants = irandom_range(irandom_range(15,25), irandom_range(30,60));
@@ -36,7 +36,7 @@ for (var i=0;i<plants;i++){
 	plant.image_index	= irandom(image_number-1);
 	plant.image_xscale	= random_range(0.2,1);
 	plant.image_yscale	= random_range(0.2,1);
-	plant.direction	= irandom(360);
+	plant.image_angle	= irandom(360);
 	plant.image_blend	= merge_color(c_white,c_dkgrey,random(1));
 	plant.image_alpha	= random_range(0.4,0.7);
 }

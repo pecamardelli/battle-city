@@ -7,6 +7,10 @@ if (status == STATUS_OUT_OF_COMBAT) {
 
 image_angle = direction;
 
-init_keys();
-get_keys();
-key_actions();
+if (enabled) {
+	init_keys();
+	get_keys();
+	key_actions();
+}
+
+stay_in_room_bounds();

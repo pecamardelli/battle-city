@@ -24,23 +24,6 @@ function key_actions(){
 	if (keyAccel) speed = approach(speed,vehicle.speed * specMultiplier,0.1);
 	else if (keyReverse) speed = approach(speed,-vehicle.speed * specMultiplier,0.1);
 	else speed = approach(speed,0,0.1);
-
-	if (x < MIN_WALL_DISTANCE) {
-		direction += vehicle.turnSpeed * specMultiplier * -sign(cos(direction*pi/180)) - 0.01;
-		x = MIN_WALL_DISTANCE;
-	}
-	if (x > room_width - MIN_WALL_DISTANCE) {
-		direction += vehicle.turnSpeed * specMultiplier * sign(cos(direction*pi/180)) + 0.01;
-		x = room_width - MIN_WALL_DISTANCE;
-	}
-	if (y < MIN_WALL_DISTANCE) {
-		direction += vehicle.turnSpeed * specMultiplier * sign(sin(direction*pi/180)) + 0.01;
-		y = MIN_WALL_DISTANCE;
-	}
-	if (y > room_height - MIN_WALL_DISTANCE) {
-		direction += vehicle.turnSpeed * specMultiplier * -sign(sin(direction*pi/180)) - 0.01;
-		y = room_height - MIN_WALL_DISTANCE;
-	}
 	
 	if (keyFire2 && !is_undefined(shotObject)) {
 		var shots = 0;

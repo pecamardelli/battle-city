@@ -9,10 +9,10 @@ global.ammo	= [
 ];
 
 global.tanks	= [
-	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],2,300,50),
-	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],3,200,120),
-	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,150,150),
-	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,350,200)
+	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],2,300,50,400,90),
+	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],10,100,120,420,105),
+	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,150,150,460,120),
+	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,350,200,500,150)
 ];
 
 global.explosions = [

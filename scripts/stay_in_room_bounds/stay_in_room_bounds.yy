@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Key Handlers",
-    "path": "folders/Scripts/Gameplay/Key Handlers.yy",
+    "name": "Helpers",
+    "path": "folders/Scripts/Gameplay/Helpers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "init_keys",
+  "name": "stay_in_room_bounds",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Gameplay",
-    "path": "folders/Scripts/Gameplay.yy",
+    "name": "Helpers",
+    "path": "folders/Scripts/Helpers.yy",
   },
   "resourceVersion": "1.0",
   "name": "create_enemy",

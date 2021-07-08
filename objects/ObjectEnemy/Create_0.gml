@@ -1,6 +1,7 @@
 /// @description Insert description here
 
 enabled			= true;
+invulnerable	= true;
 image_xscale	= 0.3;
 image_yscale	= 0.3;
 hp				= 100;
@@ -10,7 +11,7 @@ specMultiplier	= 0.4;
 keys			= undefined;
 _speed			= 0;
 shotTimeStamp	= 0;
-toImageAngle	= 0;
+toDirection		= 0;
 turn			= 0.8;
 moveScript		= ai_move_script;
 
@@ -26,4 +27,4 @@ lastX		= x;
 lastY		= y;
 pointToGo	= get_random_point();
 alarm_set(0,room_speed*3);
-alarm_set(1,room_speed*5);
+//alarm_set(1,room_speed*5);

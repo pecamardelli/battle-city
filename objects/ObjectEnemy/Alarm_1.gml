@@ -2,7 +2,7 @@
 
 if (enabled) {
 	//if (lastAngle > direction - 5 && lastAngle < direction + 5) {
-	//	toImageAngle = irandom_range(direction+70,direction+110);
+	//	toDirection = irandom_range(direction+70,direction+110);
 	//	moveScript = ai_turn_around;
 	//}
 	//lastAngle	= direction;

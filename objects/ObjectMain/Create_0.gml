@@ -43,5 +43,5 @@ global.player1Keys = {
 	
 	keyAccel: 100,
 	keyBrake: undefined,
-	keyReverse: undefined
+	keyReverse: 102
 }

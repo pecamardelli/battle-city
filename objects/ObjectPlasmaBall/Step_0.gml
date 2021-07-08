@@ -2,7 +2,7 @@
 
 image_xscale	= approach(image_xscale, toScale, 0.05);
 image_yscale	= approach(image_yscale, toScale, 0.05);
-image_angle		+= 1;
+direction		+= 1;
 
 if ((image_xscale == 1 || image_yscale == 1) && is_undefined(object)) {
 	object = create_enemy(false);

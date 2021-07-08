@@ -5,7 +5,7 @@ function get_keys(){
 	
 	if(!is_undefined(keys.keyLeft)) keyLeft		= keyboard_check(keys.keyLeft);
 	if(!is_undefined(keys.keyRight)) keyRight	= keyboard_check(keys.keyRight);
-	if(!is_undefined(keys.keyUp)) keyUp			= keyboard_check(keys.keyUp);
+	if(!is_undefined(keys.keyUp))	keyUp		= keyboard_check(keys.keyUp);
 	if(!is_undefined(keys.keyDown)) keyDown		= keyboard_check(keys.keyDown);
 
 	if(!is_undefined(keys.keyFire1)) keyFire1	= keyboard_check(keys.keyFire1);

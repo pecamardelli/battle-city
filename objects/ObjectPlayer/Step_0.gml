@@ -5,6 +5,8 @@ if (status == STATUS_OUT_OF_COMBAT) {
 	instance_destroy();
 }
 
+image_angle = direction;
+
 init_keys();
 get_keys();
 key_actions();

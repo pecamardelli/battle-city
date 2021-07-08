@@ -6,7 +6,7 @@ function create_enemy(enabled){
 	enemy.vehicle			= global.tanks[irandom(array_length(global.tanks)-1)];
 	enemy.sprite_index		= enemy.vehicle.sprite;
 	enemy.moveScript		= ai_move_script;
-	enemy.image_angle		= 180;
+	enemy.direction			= 270;
 	enemy.image_blend		= c_grey;
 	enemy.hp				= enemy.vehicle.hp;
 	return enemy;

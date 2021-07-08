@@ -24,3 +24,5 @@ if (hasPrize) {
 	if (blendAmount == 0.8) toBlendAmount = 0;
 	else if (blendAmount == 0) toBlendAmount = 0.8;
 }
+
+image_angle = direction;

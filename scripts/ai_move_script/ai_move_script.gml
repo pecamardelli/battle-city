@@ -3,16 +3,15 @@
 function ai_move_script(){
 	keyAccel = true;
 	
-	
-	
+	//direction = point_direction()
 	//var wallDistance = 80;
 	
 	//if (x < wallDistance) {
-	//	if (image_angle < 90) {
+	//	if (direction < 90) {
 	//		toImageAngle = irandom_range(180,270);
 	//		turn = 1;
 	//	}
-	//	else if (image_angle > 90 && image_angle <= 180) {
+	//	else if (direction > 90 && direction <= 180) {
 	//		toImageAngle = irandom_range(270,360);
 	//		turn = -1;
 	//	}
@@ -21,11 +20,11 @@ function ai_move_script(){
 	//}
 	
 	//if (x > room_width - wallDistance) {
-	//	if (image_angle > 270) {
+	//	if (direction > 270) {
 	//		toImageAngle = irandom_range(90,180);
 	//		turn = -1;
 	//	}
-	//	else if (image_angle > 180 && image_angle <= 270) {
+	//	else if (direction > 180 && direction <= 270) {
 	//		toImageAngle = irandom_range(0,90);
 	//		turn = 1;
 	//	}
@@ -34,11 +33,11 @@ function ai_move_script(){
 	//}
 	
 	//if (y < wallDistance) {
-	//	if (image_angle < 90) {
+	//	if (direction < 90) {
 	//		toImageAngle = irandom_range(180,270);
 	//		turn = 1;
 	//	}
-	//	else if (image_angle > 270) {
+	//	else if (direction > 270) {
 	//		toImageAngle = irandom_range(90,180);
 	//		turn = -1;
 	//	}
@@ -47,11 +46,11 @@ function ai_move_script(){
 	//}
 	
 	//if (y > room_height - wallDistance) {
-	//	if (image_angle > 90 && image_angle < 180) {
+	//	if (direction > 90 && direction < 180) {
 	//		toImageAngle = irandom_range(0,90);
 	//		turn = -1;
 	//	}
-	//	else if (image_angle >= 180 && image_angle < 270) {
+	//	else if (direction >= 180 && direction < 270) {
 	//		toImageAngle = irandom_range(270,360);
 	//		turn = 1;
 	//	}

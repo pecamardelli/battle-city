@@ -15,6 +15,44 @@ global.tanks	= [
 	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,350,200,500,150)
 ];
 
+global.prizes = [
+	{
+		sprite: SpriteStar,
+		color: c_red,
+		script: prize_star
+	},
+	{
+		sprite: SpriteWrench,
+		color: c_green,
+		script: prize_health
+	},
+	{
+		sprite: SpriteSpeedUp,
+		color: c_orange,
+		script: prize_speed
+	},
+	{
+		sprite: SpriteAccel,
+		color: c_olive,
+		script: prize_accel
+	},
+	{
+		sprite: SpriteGrenade,
+		color: c_silver,
+		script: prize_blow_all
+	},
+	{
+		sprite: SpriteClock,
+		color: c_yellow,
+		script: prize_stop_all
+	},
+	{
+		sprite: SpriteHelmet,
+		color: c_ltgrey,
+		script: prize_invulnerability
+	}
+];
+
 global.explosions = [
 	SpriteExplosion01,
 	SpriteExplosion02
@@ -25,7 +63,8 @@ global.flames = [
 	SpriteFlames02
 ];
 
-global.stageVehicleNumber = irandom_range(15,20);
+global.stageVehicleNumber	= irandom_range(15,20);
+global.disableEnemies		= false;
 
 global.player1Keys = {
 	keyLeft: 65,

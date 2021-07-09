@@ -8,9 +8,5 @@ if (hasPrize) {
 		ObjectPrize
 	);
 	
-	prize.prize = {
-		sprite: SpriteStar,
-		color: c_white,
-		script: prize_star
-	};
+	prize.prize = global.prizes[irandom(array_length(global.prizes)-1)];
 }

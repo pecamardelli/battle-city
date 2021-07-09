@@ -1,5 +1,9 @@
 /// @description Insert description here
 
+if (global.disableEnemies) enabled = false;
+
+if (hp <= 0) status = STATUS_OUT_OF_COMBAT;
+
 if (status == STATUS_OUT_OF_COMBAT) {	
 	instance_create_depth(x,y+20,depth-1,ObjectExplosion);
 	instance_destroy();
@@ -19,6 +23,7 @@ if (enabled) {
 	
 	key_actions();
 }
+else speed = approach(speed,0,0.1);
 
 if (hasPrize) {
 	image_blend	= merge_color(c_white,c_red,blendAmount);

@@ -11,6 +11,7 @@ lives			= 3;
 hp				= 100;
 score			= 0;
 vehicle			= undefined;
+shieldId		= undefined;
 specMultiplier	= 1.3;
 moveScript		= undefined;
 keys			= undefined;
@@ -19,3 +20,6 @@ shotTimeStamp	= 0;
 
 toDirection	= 0;
 shotObject	= ObjectPlayerShot;
+
+customScript = undefined;
+

@@ -10,7 +10,7 @@ if (!is_undefined(prize)) {
 		image_xscale,
 		image_yscale,
 		image_angle,
-		prize.color,
+		c_white,
 		image_alpha
 	);
 }

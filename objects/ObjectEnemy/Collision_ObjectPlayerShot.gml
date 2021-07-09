@@ -6,4 +6,3 @@ if (status == STATUS_HEALTHY) {
 		other.hit = undefined;
 	}
 }
-if (hp <= 0) status = STATUS_OUT_OF_COMBAT;

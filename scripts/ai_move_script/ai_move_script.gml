@@ -10,7 +10,7 @@ function ai_move_script(){
 	direction = approach(
 		direction,
 		pointToGoDirection,
-		vehicle.turnSpeed * specMultiplier)
+		vehicle.turnSpeed * specMultiplier
 	);
 	
 	//direction = point_direction()

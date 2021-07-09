@@ -18,4 +18,4 @@ _speed			= 0;
 shotTimeStamp	= 0;
 
 toDirection	= 0;
-shotObject		= ObjectPlayerShot;
+shotObject	= ObjectPlayerShot;

@@ -11,7 +11,7 @@ menuEntryAlpha		= 0;
 menuEntryScale		= 1.3;
 menuEntryPosition	= 0;
 menuEntrySeparation	= 80;
-menuEntryNumber		= 2;
+menuEntryNumber		= 3;
 
 menuSelectorInitialY	= menuEntryY + sprite_get_height(SpriteTank01) / 7;
 menuSelectorX			= menuEntryX - menuEntrySeparation;

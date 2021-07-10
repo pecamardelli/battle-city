@@ -3,6 +3,10 @@
 function macros(){
 	#macro	CONFIG_FILE				"config.ini"
 	
+	#macro	FADE_IN					0x00
+	#macro	FADE_OUT				0x01
+	#macro	FADE_TIME				0.3
+	
 	#macro	INPUT_KEYBOARD			"keyboard"
 	#macro	INPUT_JOYSTICK			"joystick"
 	#macro	STATUS_HEALTHY			0x00

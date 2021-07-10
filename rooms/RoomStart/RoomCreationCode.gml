@@ -7,8 +7,8 @@ global.player2 = new PlayerData();
 load_ini_file();
 
 global.ammo	= [
-	new Ammo(SpriteAmmo01,10,8,c_white,0.5,1),
-	new Ammo(SpriteAmmo01,10,10,c_dkgray,0.5,1),
+	new Ammo(SpriteAmmo01,10,10,c_white,0.5,1),
+	new Ammo(SpriteAmmo01,10,11,c_dkgray,0.5,1),
 	new Ammo(SpriteAmmo02,35,12,c_white,0.5,1),
 	new Ammo(SpriteAmmo02,40,14,c_yellow,0.5,1),
 ];

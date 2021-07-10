@@ -8,6 +8,13 @@ player1.invulnerable	= true;
 player1.sprite_index	= player1.vehicle.sprite;
 player1.hp				= player1.vehicle.hp;
 
+if (player1.data.input == INPUT_JOYSTICK && is_undefined(player1.data.padIndex)) {
+	if (array_length(global.pads) > 0) {
+		player1.data.padIndex = array_get(global.pads,0);
+		array_delete(global.pads,0,1);
+	}
+}
+
 var rocks = irandom_range(irandom_range(10,15),irandom_range(20,80));
 
 for (var i=0;i<rocks;i++) {

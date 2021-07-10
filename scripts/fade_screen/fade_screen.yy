@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Utilities.yy",
   },
   "resourceVersion": "1.0",
-  "name": "approach",
+  "name": "fade_screen",
   "tags": [],
   "resourceType": "GMScript",
 }

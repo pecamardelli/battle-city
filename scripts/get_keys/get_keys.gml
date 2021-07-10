@@ -1,22 +1,28 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function get_keys(){
+function get_keys() {
+	if(is_undefined(data)) return;
+	
+	var keys = variable_struct_get(data, "keys");
+	
 	if(is_undefined(keys)) return;
 	
-	if(!is_undefined(keys.keyLeft)) keyLeft		= keyboard_check(keys.keyLeft);
-	if(!is_undefined(keys.keyRight)) keyRight	= keyboard_check(keys.keyRight);
-	if(!is_undefined(keys.keyUp))	keyUp		= keyboard_check(keys.keyUp);
-	if(!is_undefined(keys.keyDown)) keyDown		= keyboard_check(keys.keyDown);
+	if(!is_undefined(keys.left))  left	= keyboard_check(keys.left);
+	if(!is_undefined(keys.right)) right	= keyboard_check(keys.right);
+	if(!is_undefined(keys.up))	  up	= keyboard_check(keys.up);
+	if(!is_undefined(keys.down))  down	= keyboard_check(keys.down);
 
-	if(!is_undefined(keys.keyFire1)) keyFire1	= keyboard_check(keys.keyFire1);
-	if(!is_undefined(keys.keyFire2)) keyFire2	= keyboard_check(keys.keyFire2);
-	if(!is_undefined(keys.keyFire3)) keyFire3	= keyboard_check(keys.keyFire3);
-	if(!is_undefined(keys.keyFire4)) keyFire4	= keyboard_check(keys.keyFire4);
+	if(!is_undefined(keys.fire1)) fire1	= keyboard_check(keys.fire1);
+	if(!is_undefined(keys.fire2)) fire2	= keyboard_check(keys.fire2);
+	if(!is_undefined(keys.fire3)) fire3	= keyboard_check(keys.fire3);
+	if(!is_undefined(keys.fire4)) fire4	= keyboard_check(keys.fire4);
 	
-	if(!is_undefined(keys.keyStart)) keyStart	= keyboard_check(keys.keyStart);
-	if(!is_undefined(keys.keySelect)) keySelect	= keyboard_check(keys.keySelect);
+	if(!is_undefined(keys.start)) start		= keyboard_check(keys.start);
+	if(!is_undefined(keys.select)) select	= keyboard_check(keys.select);
 	
-	if(!is_undefined(keys.keyAccel)) keyAccel		= keyboard_check(keys.keyAccel);
-	if(!is_undefined(keys.keyBrake)) keyBrake		= keyboard_check(keys.keyBrake);
-	if(!is_undefined(keys.keyReverse)) keyReverse	= keyboard_check(keys.keyReverse);
+	if(!is_undefined(keys.accel)) accel		= keyboard_check(keys.accel);
+	if(!is_undefined(keys.brake)) brake		= keyboard_check(keys.brake);
+	if(!is_undefined(keys.reverse)) reverse	= keyboard_check(keys.reverse);
+	
+	//if (array_length(global.pads) > 0)
 }

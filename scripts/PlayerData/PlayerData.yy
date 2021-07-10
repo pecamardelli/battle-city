@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Game",
-    "path": "folders/Scripts/Constructors/Game.yy",
+    "name": "Config",
+    "path": "folders/Scripts/Constructors/Config.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Ammo",
+  "name": "PlayerData",
   "tags": [],
   "resourceType": "GMScript",
 }

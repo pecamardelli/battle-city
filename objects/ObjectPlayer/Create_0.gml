@@ -3,6 +3,7 @@
 enabled			= true;
 invulnerable	= false;
 invisible		= false;
+playerNumber	= 0;
 
 image_xscale	= 0.3;
 image_yscale	= 0.3;
@@ -14,8 +15,6 @@ score			= 0;
 vehicle			= undefined;
 shieldId		= undefined;
 specMultiplier	= 1.3;
-moveScript		= undefined;
-keys			= undefined;
 _speed			= 0;
 shotTimeStamp	= 0;
 

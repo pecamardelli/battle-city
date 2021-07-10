@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Game",
-    "path": "folders/Scripts/Constructors/Game.yy",
+    "name": "Key Handlers",
+    "path": "folders/Scripts/Gameplay/Key Handlers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Ammo",
+  "name": "get_pad_values",
   "tags": [],
   "resourceType": "GMScript",
 }

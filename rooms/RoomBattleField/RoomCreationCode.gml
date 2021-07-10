@@ -1,13 +1,12 @@
 instance_create_depth(0,0,0,ObjectBattleField);
 
 player1					= instance_create_depth(room_width/2,room_height-100,-100,ObjectPlayer);
+player1.data			= global.player1;
 player1.direction		= 90;
 player1.vehicle			= json_parse(json_stringify(global.tanks[irandom(array_length(global.tanks)-1)]));
 player1.invulnerable	= true;
 player1.sprite_index	= player1.vehicle.sprite;
 player1.hp				= player1.vehicle.hp;
-player1.keys			= global.player1Keys;
-player1.moveScript		= get_keys;
 
 var rocks = irandom_range(irandom_range(10,15),irandom_range(20,80));
 

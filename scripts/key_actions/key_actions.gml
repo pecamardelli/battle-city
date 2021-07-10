@@ -1,31 +1,31 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function key_actions(){	
-	if (keyUp) {
+	if (up) {
 		var turnSpeed = vehicle.turnSpeed * specMultiplier * sign(cos(direction*pi/180));
 		if(sin(direction*pi/180) != 1) direction += turnSpeed;
 	}
 
-	if (keyDown) {
+	if (down) {
 		var turnSpeed = vehicle.turnSpeed * specMultiplier * -sign(cos(direction*pi/180));
 		if(sin(direction*pi/180) != -1) direction += turnSpeed;
 	}
 
-	if (keyLeft) {
+	if (left) {
 		var turnSpeed = vehicle.turnSpeed * specMultiplier * sign(sin(direction*pi/180));
 		if(cos(direction*pi/180) != -1) direction += turnSpeed;
 	}
 
-	if (keyRight) {
+	if (right) {
 		var turnSpeed = vehicle.turnSpeed * specMultiplier * -sign(sin(direction*pi/180));
 		if(cos(direction*pi/180) != 1) direction += turnSpeed;
 	}
 
-	if (keyAccel) speed = approach(speed,vehicle.speed * specMultiplier,0.1);
-	else if (keyReverse) speed = approach(speed,-vehicle.speed * specMultiplier,0.1);
+	if (accel) speed = approach(speed,vehicle.speed * specMultiplier,0.1);
+	else if (reverse) speed = approach(speed,-vehicle.speed * specMultiplier,0.1);
 	else speed = approach(speed,0,0.1);
 	
-	if (keyFire2 && !is_undefined(shotObject)) {
+	if (fire2 && !is_undefined(shotObject)) {
 		var shots = 0;
 		with (shotObject) if (creator == other.id) shots++;
 		

@@ -11,7 +11,12 @@ image_alpha = approach(image_alpha,toAlpha,0.1);
 
 if (enabled) {
 	init_keys();
-	get_keys();
+	
+	switch (data.input) {
+		case INPUT_KEYBOARD: get_keys(); break;
+		case INPUT_JOYSTICK: get_pad_values(4); break;
+	}
+	
 	key_actions();
 }
 

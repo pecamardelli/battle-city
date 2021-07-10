@@ -13,7 +13,7 @@ menuEntryPosition	= 0;
 menuEntrySeparation	= 80;
 menuEntryNumber		= 2;
 
-menuSelectorInitialY	= menuEntryY + sprite_get_width(SpriteTank01) / 7;
+menuSelectorInitialY	= menuEntryY + sprite_get_height(SpriteTank01) / 7;
 menuSelectorX			= menuEntryX - menuEntrySeparation;
 menuSelectorY			= menuSelectorInitialY;
 menuSelectorSprite		= SpriteTank01;

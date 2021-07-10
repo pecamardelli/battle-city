@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Constructors",
-    "path": "folders/Scripts/Constructors.yy",
+    "name": "Game",
+    "path": "folders/Scripts/Constructors/Game.yy",
   },
   "resourceVersion": "1.0",
   "name": "MachineGun",

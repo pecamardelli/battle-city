@@ -15,6 +15,8 @@ toDirection		= 0;
 turn			= 0.8;
 moveScript		= ai_move_script;
 
+toAlpha	= 1;
+
 nearestTarget	= undefined;
 shotObject		= ObjectEnemyShot;
 blendAmount		= 0;
@@ -27,4 +29,7 @@ lastX		= x;
 lastY		= y;
 pointToGo	= get_random_point();
 alarm_set(0,room_speed*3);
-//alarm_set(1,room_speed*5);
+
+machineGun				= undefined;
+machineGunShotTimeStamp	= 0;
+machineGunOffset		= 15;

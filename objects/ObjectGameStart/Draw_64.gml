@@ -12,5 +12,5 @@ if (logoAlpha == 1 && logoY == logoYFinal) {
 	draw_sprite_ext(SpritePlayerGame,0,menuEntryX+60,menuEntryY,menuEntryScale,menuEntryScale,0,c_white,menuEntryAlpha);
 	draw_sprite_ext(SpriteMenuTwo,0,menuEntryX,menuEntryY+menuEntrySeparation,menuEntryScale,menuEntryScale,0,c_white,menuEntryAlpha);
 	draw_sprite_ext(SpritePlayerGame,0,menuEntryX+60,menuEntryY+menuEntrySeparation,menuEntryScale,menuEntryScale,0,c_white,menuEntryAlpha);
-	draw_sprite_ext(menuSelectorSprite,0,menuSelectorX,menuSelectorY,0.33,0.33,-90,c_white,menuEntryAlpha);
+	draw_sprite_ext(menuSelectorSprite,0,menuSelectorX,menuSelectorY,0.33,0.33,0,c_white,menuEntryAlpha);
 }

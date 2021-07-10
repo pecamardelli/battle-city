@@ -7,6 +7,8 @@ if (status == STATUS_OUT_OF_COMBAT) {
 
 image_angle = direction;
 
+image_alpha = approach(image_alpha,toAlpha,0.1);
+
 if (enabled) {
 	init_keys();
 	get_keys();

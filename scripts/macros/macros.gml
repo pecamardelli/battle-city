@@ -5,4 +5,8 @@ function macros(){
 	#macro	STATUS_OUT_OF_COMBAT	0x01
 	
 	#macro	MIN_WALL_DISTANCE		50
+	#macro	FREEZE_TIME				10
+	#macro	INVULNERABILITY_TIME	10
+	#macro	INVISIBILITY_TIME		20
+	#macro	INVISIBILITY_ALPHA		0.2
 }

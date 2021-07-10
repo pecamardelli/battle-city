@@ -2,6 +2,7 @@
 
 enabled			= true;
 invulnerable	= false;
+invisible		= false;
 
 image_xscale	= 0.3;
 image_yscale	= 0.3;
@@ -23,3 +24,8 @@ shotObject	= ObjectPlayerShot;
 
 customScript = undefined;
 
+toAlpha	= 1;
+
+machineGun				= undefined;
+machineGunShotTimeStamp	= 0;
+machineGunOffset		= 15;

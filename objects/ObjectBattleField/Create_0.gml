@@ -6,4 +6,4 @@ image_blend		= c_grey;
 
 customScript	= undefined;
 
-alarm_set(0,3);
+alarm_set(0,room_speed*3);

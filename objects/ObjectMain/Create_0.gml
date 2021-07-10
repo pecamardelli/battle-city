@@ -2,17 +2,26 @@
 randomize();
 
 global.ammo	= [
-	new Ammo(SpriteAmmo01,10,8,c_white),
-	new Ammo(SpriteAmmo01,10,10,c_dkgray),
-	new Ammo(SpriteAmmo02,35,12,c_white),
-	new Ammo(SpriteAmmo02,40,14,c_yellow),
+	new Ammo(SpriteAmmo01,10,8,c_white,0.5,1),
+	new Ammo(SpriteAmmo01,10,10,c_dkgray,0.5,1),
+	new Ammo(SpriteAmmo02,35,12,c_white,0.5,1),
+	new Ammo(SpriteAmmo02,40,14,c_yellow,0.5,1),
+];
+
+global.machineGuns = [
+	new MachineGun(
+		new Ammo(SpriteAmmo01,2,15,c_white,0.2,0.4),
+		8,
+		180,
+		0
+	)
 ];
 
 global.tanks	= [
-	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],2,300,50,400,90),
-	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],10,100,120,420,105),
-	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,150,150,460,120),
-	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,350,200,500,150)
+	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],1,300,50,400,90),
+	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],2,250,120,420,105),
+	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,350,150,460,120),
+	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,400,200,500,150)
 ];
 
 global.prizes = [
@@ -44,12 +53,27 @@ global.prizes = [
 	{
 		sprite: SpriteClock,
 		color: c_yellow,
-		script: prize_stop_all
+		script: prize_freeze_all
 	},
 	{
 		sprite: SpriteHelmet,
 		color: c_ltgrey,
 		script: prize_invulnerability
+	},
+	{
+		sprite: SpriteTank,
+		color: c_teal,
+		script: prize_life
+	},
+	{
+		sprite: SpriteInvisibility,
+		color: c_ltgrey,
+		script: prize_invisibility
+	},
+	{
+		sprite: SpriteMachineGun,
+		color: make_color_rgb(192,0,0),
+		script: prize_machine_gun
 	}
 ];
 

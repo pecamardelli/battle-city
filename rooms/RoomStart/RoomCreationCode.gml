@@ -1,6 +1,9 @@
 /// @description Insert description here
 randomize();
 
+window_set_cursor(cr_none);
+cursor_sprite = SpriteCursor;
+
 global.player1 = new PlayerData();
 global.player2 = new PlayerData();
 

@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerData() constructor {
 	input		= undefined;
+	mouseAim	= undefined;
 	padIndex	= undefined;
 	
 	keys	= {

@@ -22,6 +22,9 @@ function load_ini_file () {
 	global.player1.keys.brake	= ini_read_real("player1","keyBrake",105);
 	global.player1.keys.reverse	= ini_read_real("player1","keyReverse",102)
 	
+	if (ini_read_string("player1","mouseAim",FALSE) == FALSE) global.player1.mouseAim = false;
+	else global.player1.mouseAim = true;
+	
 	global.player2.input		= ini_read_string("player2","input","keyboard");
 	
 	global.player2.keys.left	= ini_read_real("player2","keyLeft",65);
@@ -39,7 +42,19 @@ function load_ini_file () {
 	
 	global.player2.keys.accel	= ini_read_real("player2","keyAccel",100);
 	global.player2.keys.brake	= ini_read_real("player2","keyBrake",105);
-	global.player2.keys.reverse	= ini_read_real("player2","keyReverse",102)
+	global.player2.keys.reverse	= ini_read_real("player2","keyReverse",102);
+	
+	if (ini_read_string("player2","mouseAim",FALSE) == FALSE) global.player2.mouseAim = false;
+	else global.player2.mouseAim = true;
+	
+	if (ini_read_string("game","friendlyFire","false") == FALSE) global.friendlyFire = false;
+	else global.friendlyFire = true;
+	
+	if (ini_read_string("game","eagle","false") == FALSE) global.eagle = false;
+	else global.eagle = true;
+	
+	show_debug_message(global.friendlyFire);
+	show_debug_message(global.eagle)
 	
 	ini_close();
 }

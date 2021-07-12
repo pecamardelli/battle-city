@@ -87,3 +87,10 @@ draw_sprite_ext(SpriteReverse,0,xPos,yPos,1,1,0,c_white,1);
 draw_text(xPos+row1width+row2width/2,yPos,ansi_char(global.player1.keys.reverse)); yPos += separation;
 
 draw_sprite_ext(SpriteMouseAim,0,xPos,yPos,1,1,0,c_white,1); yPos += separation;
+
+// Misc
+var xPos = room_width*0.75 - rowWidth/2;
+var yPos = 200;
+
+draw_sprite_ext(SpriteFriendlyFire,0,xPos,yPos,1,1,0,c_white,1); yPos += separation;
+draw_sprite_ext(SpriteEagle,0,xPos,yPos,1,1,0,c_white,1); yPos += separation;

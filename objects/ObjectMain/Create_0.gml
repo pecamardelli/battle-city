@@ -50,11 +50,11 @@ global.prizes = [
 		color: c_orange,
 		script: prize_speed
 	},
-	{
-		sprite: SpritePrizeAccel,
-		color: c_olive,
-		script: prize_accel
-	},
+	//{
+	//	sprite: SpritePrizeAccel,
+	//	color: c_olive,
+	//	script: prize_accel
+	//},
 	{
 		sprite: SpriteGrenade,
 		color: c_silver,
@@ -99,3 +99,4 @@ global.flames = [
 
 global.stageVehicleNumber	= irandom_range(15,20);
 global.disableEnemies		= false;
+global.enemyFriendlyFire	= false;

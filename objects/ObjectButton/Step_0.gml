@@ -1,5 +1,8 @@
 /// @description Insert description here
 
+if (level < instance_number(ObjectWindow)) enabled = false;
+else enabled = true;
+
 if (!enabled) return;
 
 if (position_meeting(mouse_x,mouse_y,id)) {

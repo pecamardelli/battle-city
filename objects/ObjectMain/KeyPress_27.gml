@@ -1,3 +1,3 @@
 /// @description Insert description here
 
-if (room == RoomStart) game_end();
+if (room == RoomStart) fade_screen(FADE_OUT,FADE_TIME,game_end,undefined);

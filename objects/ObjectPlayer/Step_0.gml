@@ -6,7 +6,6 @@ if (status == STATUS_OUT_OF_COMBAT) {
 }
 
 image_angle = direction;
-
 image_alpha = approach(image_alpha,toAlpha,0.1);
 
 if (enabled) {
@@ -14,7 +13,7 @@ if (enabled) {
 	
 	switch (data.input) {
 		case INPUT_KEYBOARD: get_keys(); break;
-		case INPUT_JOYSTICK: get_pad_values(4); break;
+		case INPUT_JOYSTICK: get_pad_values(4, data.keys); break;
 	}
 	
 	key_actions();

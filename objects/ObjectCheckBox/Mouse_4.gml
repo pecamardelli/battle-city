@@ -2,4 +2,4 @@
 
 if (!enabled) return;
 if (!is_undefined(onClickAction)) script_execute(onClickAction);
-checked = !checked;
+//checked = !checked;

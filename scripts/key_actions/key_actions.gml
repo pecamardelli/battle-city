@@ -25,7 +25,7 @@ function key_actions(){
 	else if (reverse) speed = approach(speed,-vehicle.speed * specMultiplier,0.1);
 	else speed = approach(speed,0,0.1);
 	
-	if (fire2 && !is_undefined(shotObject)) {
+	if (fire1 && !is_undefined(shotObject)) {
 		var shots = 0;
 		with (shotObject) if (creator == other.id) shots++;
 		

@@ -5,22 +5,42 @@ function PlayerData() constructor {
 	mouseAim	= undefined;
 	padIndex	= undefined;
 	
-	keys	= {
-		up:		undefined,
-		down:	undefined,
-		left:	undefined,
-		right:	undefined,
+	keys = {
+		keyboard: {
+			up:		undefined,
+			down:	undefined,
+			left:	undefined,
+			right:	undefined,
 		
-		fire1:	undefined,
-		fire2:	undefined,
-		fire3:	undefined,
-		fire4:	undefined,
+			fire1:	undefined,
+			fire2:	undefined,
+			fire3:	undefined,
+			fire4:	undefined,
 		
-		accel:	 undefined,
-		brake:	 undefined,
-		reverse: undefined,
+			accel:	 undefined,
+			brake:	 undefined,
+			reverse: undefined,
 		
-		start:	undefined,
-		select:	undefined,
+			start:	undefined,
+			select:	undefined,
+		},
+		pad: {
+			up:		undefined,
+			down:	undefined,
+			left:	undefined,
+			right:	undefined,
+		
+			fire1:	undefined,
+			fire2:	undefined,
+			fire3:	undefined,
+			fire4:	undefined,
+		
+			accel:	 undefined,
+			brake:	 undefined,
+			reverse: undefined,
+		
+			start:	undefined,
+			select:	undefined,
+		}
 	};
 }

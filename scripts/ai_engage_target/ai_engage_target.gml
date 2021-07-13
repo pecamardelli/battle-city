@@ -5,5 +5,5 @@ function ai_engage_target(){
 	
 	direction = approach(direction, targetDirection, vehicle.turnSpeed * specMultiplier);
 	
-	if (abs(angle_difference(direction, targetDirection)) < 10) fire2 = true;
+	if (abs(angle_difference(direction, targetDirection)) < 10) fire1 = true;
 }

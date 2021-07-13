@@ -97,6 +97,22 @@ global.flames = [
 	SpriteFlames02
 ];
 
+global.padButtons = ds_map_create();
+global.padButtons[? gp_padu]	= SpriteArrowUp;
+global.padButtons[? gp_padd]	= SpriteArrowDown;
+global.padButtons[? gp_padl]	= SpriteArrowLeft;
+global.padButtons[? gp_padr]	= SpriteArrowRight;
+global.padButtons[? gp_face1]	= SpriteButton1;
+global.padButtons[? gp_face2]	= SpriteButton2;
+global.padButtons[? gp_face3]	= SpriteButton3;
+global.padButtons[? gp_face4]	= SpriteButton4;
+global.padButtons[? gp_shoulderl]	= SpriteL1;
+global.padButtons[? gp_shoulderlb]	= SpriteL2;
+global.padButtons[? gp_shoulderr]	= SpriteR1;
+global.padButtons[? gp_shoulderrb]	= SpriteR2;
+global.padButtons[? gp_start]	= SpriteStar;
+global.padButtons[? gp_select]	= SpriteSelect;
+
 global.stageVehicleNumber	= irandom_range(15,20);
 global.disableEnemies		= false;
 global.enemyFriendlyFire	= false;

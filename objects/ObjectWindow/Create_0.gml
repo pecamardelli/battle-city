@@ -7,9 +7,11 @@ width		= 0;
 height		= 0;
 currentWidth	= 0;
 currentHeight	= 0;
-color		= make_color_rgb(128,0,0);
-frameWidth	= 8;
+color			= make_color_rgb(128,0,0);
+frameWidth		= 8;
 caption			= undefined;
+captionX		= x;
+captionY		= y;
 playerKeySet	= undefined;
 
 image_alpha		= 0;

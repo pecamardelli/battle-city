@@ -20,7 +20,7 @@ function config_key_window(){
 }
 
 function getKeyboardInput() {
-	if (!is_undefined(playerKeySet) && !close) {
+	if (!is_undefined(player) && !close) {
 		if (keyboard_check(vk_anykey)) {
 			variable_struct_set(player.keys.keyboard,keyName,keyboard_lastkey);
 			close = true;

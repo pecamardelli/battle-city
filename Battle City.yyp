@@ -32,6 +32,7 @@
     {"id":{"name":"SpriteTank01","path":"sprites/SpriteTank01/SpriteTank01.yy",},"order":0,},
     {"id":{"name":"SpriteTank02","path":"sprites/SpriteTank02/SpriteTank02.yy",},"order":2,},
     {"id":{"name":"SpriteL2","path":"sprites/SpriteL2/SpriteL2.yy",},"order":33,},
+    {"id":{"name":"add_to_stats","path":"scripts/add_to_stats/add_to_stats.yy",},"order":4,},
     {"id":{"name":"ObjectPlayer","path":"objects/ObjectPlayer/ObjectPlayer.yy",},"order":1,},
     {"id":{"name":"SpriteArrowUp","path":"sprites/SpriteArrowUp/SpriteArrowUp.yy",},"order":24,},
     {"id":{"name":"SpriteButton4","path":"sprites/SpriteButton4/SpriteButton4.yy",},"order":23,},

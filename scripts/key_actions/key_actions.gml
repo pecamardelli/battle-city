@@ -37,6 +37,7 @@ function key_actions(){
 			shot.image_xscale	= vehicle.ammo.xScale;
 			shot.image_yscale	= vehicle.ammo.yScale;
 			shot.creator		= id;
+			shot.playerNumber	= number;
 			shot.sprite_index	= vehicle.ammo.sprite;
 			shot.speed			= vehicle.ammo.speed;
 			shot.direction		= angle;
@@ -56,6 +57,7 @@ function key_actions(){
 				machineGunShot.image_xscale	= machineGun.ammo.xScale;
 				machineGunShot.image_yscale	= machineGun.ammo.yScale;
 				machineGunShot.creator		= id;
+				machineGunShot.playerNumber	= number;
 				machineGunShot.sprite_index	= machineGun.ammo.sprite;
 				machineGunShot.speed		= machineGun.ammo.speed;
 				machineGunShot.direction	= angle;
@@ -68,6 +70,7 @@ function key_actions(){
 				machineGunShot.image_xscale	= machineGun.ammo.xScale;
 				machineGunShot.image_yscale	= machineGun.ammo.yScale;
 				machineGunShot.creator		= id;
+				machineGunShot.playerNumber	= number;
 				machineGunShot.sprite_index	= machineGun.ammo.sprite;
 				machineGunShot.speed		= machineGun.ammo.speed;
 				machineGunShot.direction	= angle;

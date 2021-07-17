@@ -7,6 +7,7 @@ image_yscale	= 0.3;
 hp				= 100;
 status			= STATUS_HEALTHY;
 vehicle			= undefined;
+number			= undefined;
 specMultiplier	= 0.4;
 keys			= undefined;
 _speed			= 0;

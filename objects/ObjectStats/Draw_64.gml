@@ -8,11 +8,11 @@ var columnWidth	= 500;
 var columnNumber = global.playerNumber;
 var columnSeparation = (room_width - columnNumber*columnWidth) / (columnNumber + 1);
 var xPos = columnSeparation;
-var yPos = room_height/3;
+var yPos = room_height/4;
 var rowSeparation = 50;
 
 draw_set_font(font_arial_black_24);
-draw_text_color(xPos + columnWidth/2,yPos,"Player 1 stats",c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += rowSeparation;
+draw_text_color(xPos + columnWidth/2,yPos,"PLAYER 1",c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += 100;
 draw_set_halign(fa_left);
 
 draw_text_color(xPos,yPos,"Total points:",c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += rowSeparation;
@@ -29,7 +29,7 @@ draw_text_color(xPos,yPos,"Distance covered:",c_ltgrey,c_ltgrey,c_ltgrey,c_ltgre
 
 draw_set_halign(fa_right);
 var xPos = columnSeparation + columnWidth;
-var yPos = room_height/3;
+var yPos = room_height/4 + 100;
 
 draw_text_color(xPos,yPos,string(global.player1.stats.totalPoints),c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += rowSeparation;
 draw_text_color(xPos,yPos,string(global.player1.stats.totalShots),c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += rowSeparation;
@@ -44,11 +44,11 @@ draw_text_color(xPos,yPos,string(global.player1.stats.totalDistance),c_ltgrey,c_
 
 if (global.playerNumber == 2) {
 	var xPos = columnWidth + columnSeparation*2;
-	var yPos = room_height/3;
+	var yPos = room_height/4;
 	var rowSeparation = 50;
 	
 	draw_set_halign(fa_center);
-	draw_text_color(xPos + columnWidth/2,room_height/6,"Player 2 stats",c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += rowSeparation;
+	draw_text_color(xPos + columnWidth/2,yPos,"PLAYER 2",c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += 100;
 	
 	draw_set_halign(fa_left);
 
@@ -65,6 +65,8 @@ if (global.playerNumber == 2) {
 
 
 	draw_set_halign(fa_right);
+	var xPos = columnSeparation*2 + columnWidth*2;
+	var yPos = room_height/4 + 100;
 
 	draw_text_color(xPos,yPos,string(global.player2.stats.totalPoints),c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += rowSeparation;
 	draw_text_color(xPos,yPos,string(global.player2.stats.totalShots),c_ltgrey,c_ltgrey,c_ltgrey,c_ltgrey,alpha); yPos += rowSeparation;

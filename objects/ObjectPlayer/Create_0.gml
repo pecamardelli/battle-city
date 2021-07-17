@@ -1,15 +1,15 @@
 /// @description Insert description here
 
-enabled			= true;
+enabled			= false;
 invulnerable	= false;
 invisible		= false;
-playerNumber	= 0;
+number			= undefined;
+data			= undefined;
 
 image_xscale	= 0.3;
 image_yscale	= 0.3;
 
 status			= STATUS_HEALTHY;
-lives			= 3;
 hp				= 100;
 score			= 0;
 vehicle			= undefined;

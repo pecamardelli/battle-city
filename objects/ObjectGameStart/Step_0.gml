@@ -23,6 +23,9 @@ if (!is_undefined(global.player1.padIndex)) {
 	
 	if (gamepad_button_check_pressed(global.player1.padIndex, gp_start)) {
 		if (menuEntryPosition == 2) fade_screen(FADE_OUT,FADE_TIME,undefined,RoomOptions); //room_goto(RoomOptions);
-		else room_goto(RoomBattleField);
+		else {
+			global.playerNumber = menuEntryPosition + 1;
+			fade_screen(FADE_OUT,FADE_TIME,undefined,RoomStageScreen);
+		}
 	}
 }

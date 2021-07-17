@@ -30,6 +30,8 @@ function key_actions(){
 		with (shotObject) if (creator == other.id) shots++;
 		
 		if (shots < vehicle.maxBurst && (current_time - shotTimeStamp) >= vehicle.burstInterval) {
+			var data = variable_instance_get(id,"data");
+			if (!is_undefined(data)) data.stats.totalShots++;
 			var angle = direction + random_range(-1,1);
 			var shot = instance_create_depth(x,y,depth+1,shotObject);
 			shot.image_xscale	= vehicle.ammo.xScale;

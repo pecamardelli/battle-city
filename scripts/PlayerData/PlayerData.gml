@@ -43,4 +43,8 @@ function PlayerData() constructor {
 			select:	undefined,
 		}
 	};
+	
+	stats = new PlayerStats();
+	vehicle	= undefined;
+	tanks = 3;
 }

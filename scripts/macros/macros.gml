@@ -20,4 +20,11 @@ function macros(){
 	#macro	INVULNERABILITY_TIME	10
 	#macro	INVISIBILITY_TIME		20
 	#macro	INVISIBILITY_ALPHA		0.2
+	
+	// Logger
+	#macro LOG_INFO		"[INFO]"
+	#macro LOG_SYSTEM	"[SYSTEM]"
+	#macro LOG_WARNING	"[WARNING]"
+	#macro LOG_ERROR	"[ERROR]"
+	#macro LOG_DEBUG	"[DEBUG]"
 }

@@ -6,7 +6,12 @@ if (status == STATUS_HEALTHY) {
 		x += cos(other.image_angle*pi/180) * other.hp / 10;
 		y -= sin(other.image_angle*pi/180) * other.hp / 10;
 		other.hit = undefined;
+		data.stats.shotsTaken++;
+		
+		if (hp <= 0) {
+			status = STATUS_OUT_OF_COMBAT;
+			data.stats.timesKilled++;
+		}
 	}
 }
 
-if (hp <= 0) status = STATUS_OUT_OF_COMBAT;

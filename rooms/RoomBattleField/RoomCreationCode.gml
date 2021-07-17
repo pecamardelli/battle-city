@@ -1,19 +1,10 @@
-instance_create_depth(0,0,0,ObjectBattleField);
+var battleField = instance_create_depth(0,0,0,ObjectBattleField);
+battleField.stageData = json_parse(json_stringify(global.stageData));
+battleField.alarm[0] = room_speed*battleField.stageData.vehicleInterval;
 
-player1					= instance_create_depth(room_width/2,room_height-100,-100,ObjectPlayer);
-player1.data			= global.player1;
-player1.direction		= 90;
-player1.vehicle			= json_parse(json_stringify(global.tanks[irandom(array_length(global.tanks)-1)]));
-player1.invulnerable	= true;
-player1.sprite_index	= player1.vehicle.sprite;
-player1.hp				= player1.vehicle.hp;
+create_player1();
 
-if (player1.data.input == INPUT_JOYSTICK && is_undefined(player1.data.padIndex)) {
-	if (array_length(global.pads) > 0) {
-		player1.data.padIndex = array_get(global.pads,0);
-		array_delete(global.pads,0,1);
-	}
-}
+if (global.playerNumber == 2) create_player2();
 
 var rocks = irandom_range(irandom_range(10,15),irandom_range(20,80));
 

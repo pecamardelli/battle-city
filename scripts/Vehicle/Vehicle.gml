@@ -10,7 +10,8 @@ function Vehicle(
 	_burstInterval,
 	_hp,
 	_engageDistance,
-	_engageMaxAngle
+	_engageMaxAngle,
+	_points
 ) constructor {
 	sprite			= _sprite;
 	speed			= _speed;
@@ -22,4 +23,5 @@ function Vehicle(
 	hp				= _hp;
 	engageDistance	= _engageDistance;
 	engageMaxAngle	= _engageMaxAngle;
+	points			= _points;
 }

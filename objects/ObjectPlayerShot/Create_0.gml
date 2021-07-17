@@ -1,5 +1,6 @@
 /// @description Insert description here
 
+creator		= undefined;
 exploding	= false;
 hit			= undefined;
 hp			= 0;

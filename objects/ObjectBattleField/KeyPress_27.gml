@@ -1,3 +1,3 @@
 /// @description Insert description here
 
-room_goto(RoomStart);
+fade_screen(FADE_OUT,FADE_TIME,undefined,RoomStart);

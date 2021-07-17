@@ -6,7 +6,7 @@ image_alpha		= approach(image_alpha, toScale, 0.05);
 direction		+= 1;
 
 if ((image_xscale == 1 || image_yscale == 1) && is_undefined(object)) {
-	object				= create_enemy(false);
+	object				= createScript(scriptArgument);
 	object.invulnerable = true;
 	alarm_set(0,room_speed*2);
 }

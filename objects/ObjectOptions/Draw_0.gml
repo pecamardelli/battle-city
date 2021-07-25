@@ -85,7 +85,8 @@ else {
 	draw_sprite_ext(global.padButtons[? global.player1.keys.pad.reverse],0,xPos+row1width+row2width/2,yPos,1,1,0,c_white,1); yPos += separation;
 }
 
-draw_sprite_ext(SpriteMouseAim,0,xPos,yPos,1,1,0,c_white,1); yPos += separation;
+// MOUSE AIM - To be implemented
+//draw_sprite_ext(SpriteMouseAim,0,xPos,yPos,1,1,0,c_white,1); yPos += separation;
 
 var xPos = room_width/2 - rowWidth/2;
 var yPos = 100;
@@ -142,7 +143,8 @@ else {
 	draw_sprite_ext(global.padButtons[? global.player2.keys.pad.reverse],0,xPos+row1width+row2width/2,yPos,1,1,0,c_white,1); yPos += separation;
 }
 
-draw_sprite_ext(SpriteMouseAim,0,xPos,yPos,1,1,0,c_white,1); yPos += separation;
+// MOUSE AIM - To be implemented
+//draw_sprite_ext(SpriteMouseAim,0,xPos,yPos,1,1,0,c_white,1); yPos += separation;
 
 // Misc
 var xPos = room_width*0.75 - rowWidth/2;

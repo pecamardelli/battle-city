@@ -64,7 +64,8 @@ for (var i=0;i<11;i++) {
 	yPos			+= separation;
 }
 
-var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
+// MOUSE AIM - To be implemented
+// var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
 
 // Player 2 column
 var xPos = room_width/2 + rowWidth/2 - buttonWidth;
@@ -103,7 +104,8 @@ for (var i=0;i<11;i++) {
 	yPos			+= separation;
 }
 
-//var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
+// MOUSE AIM - To be implemented
+// var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
 
 // Misc
 var xPos = room_width*0.75 + rowWidth/2 - 40;

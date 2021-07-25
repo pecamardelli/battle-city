@@ -3,6 +3,7 @@ battleField.stageData = json_parse(json_stringify(global.stageData));
 battleField.alarm[0] = room_speed*battleField.stageData.vehicleInterval;
 
 global.disableEnemies = false;
+cursor_sprite = -1;
 
 create_player1();
 

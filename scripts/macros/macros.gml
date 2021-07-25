@@ -6,6 +6,9 @@ function macros(){
 	#macro	TRUE					"true"
 	#macro	FALSE					"false"
 	
+	#macro	LEVELS					1000
+	#macro	PRIZE_PROBABILITY		25
+	
 	#macro	FADE_IN					0x00
 	#macro	FADE_OUT				0x01
 	#macro	FADE_TIME				0.3

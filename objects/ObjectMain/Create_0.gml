@@ -38,51 +38,51 @@ global.player1.vehicle = json_parse(json_stringify(global.tanks[3]));
 global.player2.vehicle = json_parse(json_stringify(global.tanks[0]));
 
 global.prizes = [
-	//{
-	//	sprite: SpriteStar,
-	//	color: c_red,
-	//	script: prize_star
-	//},
-	//{
-	//	sprite: SpriteWrench,
-	//	color: c_green,
-	//	script: prize_health
-	//},
-	//{
-	//	sprite: SpriteSpeedUp,
-	//	color: c_orange,
-	//	script: prize_speed
-	//},
+	{
+		sprite: SpriteStar,
+		color: c_red,
+		script: prize_star
+	},
+	{
+		sprite: SpriteWrench,
+		color: c_green,
+		script: prize_health
+	},
+	{
+		sprite: SpriteSpeedUp,
+		color: c_orange,
+		script: prize_speed
+	},
 	//{
 	//	sprite: SpritePrizeAccel,
 	//	color: c_olive,
 	//	script: prize_accel
 	//},
-	//{
-	//	sprite: SpriteGrenade,
-	//	color: c_silver,
-	//	script: prize_blow_all
-	//},
-	//{
-	//	sprite: SpriteClock,
-	//	color: c_yellow,
-	//	script: prize_freeze_all
-	//},
-	//{
-	//	sprite: SpriteHelmet,
-	//	color: c_ltgrey,
-	//	script: prize_invulnerability
-	//},
-	//{
-	//	sprite: SpriteTank,
-	//	color: c_teal,
-	//	script: prize_life
-	//},
-	//{
-	//	sprite: SpriteInvisibility,
-	//	color: c_ltgrey,
-	//	script: prize_invisibility
-	//},
+	{
+		sprite: SpriteGrenade,
+		color: c_silver,
+		script: prize_blow_all
+	},
+	{
+		sprite: SpriteClock,
+		color: c_yellow,
+		script: prize_freeze_all
+	},
+	{
+		sprite: SpriteHelmet,
+		color: c_ltgrey,
+		script: prize_invulnerability
+	},
+	{
+		sprite: SpriteTank,
+		color: c_teal,
+		script: prize_life
+	},
+	{
+		sprite: SpriteInvisibility,
+		color: c_ltgrey,
+		script: prize_invisibility
+	},
 	{
 		sprite: SpriteMachineGun,
 		color: make_color_rgb(192,0,0),
@@ -116,12 +116,14 @@ global.padButtons[? gp_shoulderrb]	= SpriteR2;
 global.padButtons[? gp_start]	= SpriteStar;
 global.padButtons[? gp_select]	= SpriteSelect;
 
-global.stageData = {
+global.stageDataBase = {
 	vehicleConcurrency: 5,
-	vehicleNumber: 3,
-	vehicleInterval: 12,
+	vehicleNumber: 15,
+	vehicleInterval: 8,
 	number: 1
 };
+
+global.stageData = json_parse(json_stringify(global.stageDataBase));
 
 global.disableEnemies		= false;
 global.enemyFriendlyFire	= false;

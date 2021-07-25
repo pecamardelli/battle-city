@@ -23,7 +23,7 @@ shotObject		= ObjectEnemyShot;
 blendAmount		= 0;
 toBlendAmount	= 1;
 
-if (random(100) < 50) hasPrize = true;
+if (random(100) <= PRIZE_PROBABILITY) hasPrize = true;
 else hasPrize = false;
 
 lastX		= x;

@@ -9,7 +9,7 @@ if (status == STATUS_HEALTHY) {
 		if (hp <= 0) {
 			if(instance_exists(other.creator)) {
 				add_to_stats(other.playerNumber,"enemiesKilled",1);
-				add_to_stats(other.playerNumber,"totalPoints",vehicle.points);
+				add_to_stats(other.playerNumber,"totalPoints",data.vehicle.points);
 			}
 		}
 	}

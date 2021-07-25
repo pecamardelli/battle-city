@@ -3,11 +3,11 @@
 function create_enemy(enabled){
 	var enemy				= instance_create_depth(x,y,-100,ObjectEnemy);
 	enemy.enabled			= enabled;
-	enemy.vehicle			= global.tanks[irandom(array_length(global.tanks)-1)];
-	enemy.sprite_index		= enemy.vehicle.sprite;
+	enemy.data.vehicle		= global.tanks[irandom(array_length(global.tanks)-1)];
+	enemy.sprite_index		= enemy.data.vehicle.sprite;
 	enemy.moveScript		= ai_move_script;
 	enemy.direction			= 270;
 	enemy.image_blend		= c_grey;
-	enemy.hp				= enemy.vehicle.hp;
+	enemy.hp				= enemy.data.vehicle.hp;
 	return enemy;
 }

@@ -25,6 +25,5 @@ customScript = undefined;
 
 toAlpha	= 1;
 
-machineGun				= undefined;
 machineGunShotTimeStamp	= 0;
 machineGunOffset		= 15;

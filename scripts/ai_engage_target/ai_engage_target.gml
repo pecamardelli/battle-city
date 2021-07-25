@@ -3,7 +3,7 @@
 function ai_engage_target(){
 	var targetDirection = point_direction(x,y,nearestTarget.x,nearestTarget.y);
 	
-	direction = approach(direction, targetDirection, vehicle.turnSpeed * specMultiplier);
+	direction = approach(direction, targetDirection, data.vehicle.turnSpeed * specMultiplier);
 	
 	if (abs(angle_difference(direction, targetDirection)) < 10) fire1 = true;
 }

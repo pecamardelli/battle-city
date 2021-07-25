@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ai_turn_around(){
 	accel = true;
-	direction = approach(direction,toDirection,vehicle.turnSpeed * specMultiplier);
+	direction = approach(direction,toDirection,data.vehicle.turnSpeed * specMultiplier);
 	if (direction >= toDirection) {
 		moveScript = ai_move_script;
 		pointToGo = get_random_point();

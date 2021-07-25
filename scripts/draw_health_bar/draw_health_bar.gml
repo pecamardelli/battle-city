@@ -16,7 +16,7 @@ function draw_health_bar(){
 		draw_roundrect_color_ext(
 			x - 20,
 			y - 5,
-			x - 20 + hp * 40 / vehicle.hp,
+			x - 20 + hp * 40 / data.vehicle.hp,
 			y + 5,
 			5,
 			5,

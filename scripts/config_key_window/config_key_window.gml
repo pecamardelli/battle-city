@@ -12,6 +12,7 @@ function config_key_window(){
 	window.caption		= "ENTER " + string_upper(keyName) + " KEY";
 	window.player		= player;
 	window.keyName		= keyName;
+	
 	switch (player.input) {
 		case INPUT_KEYBOARD: window.stepAction = getKeyboardInput; break;
 		case INPUT_JOYSTICK: window.stepAction = getPadInput; break;

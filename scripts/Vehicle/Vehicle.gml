@@ -11,7 +11,8 @@ function Vehicle(
 	_hp,
 	_engageDistance,
 	_engageMaxAngle,
-	_points
+	_points,
+	_machineGun
 ) constructor {
 	sprite			= _sprite;
 	speed			= _speed;
@@ -24,4 +25,5 @@ function Vehicle(
 	engageDistance	= _engageDistance;
 	engageMaxAngle	= _engageMaxAngle;
 	points			= _points;
+	machineGun		= _machineGun;
 }

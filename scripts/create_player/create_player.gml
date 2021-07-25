@@ -13,9 +13,8 @@ function create_player(playerNumber){
 	}
 	
 	player.direction	= 90;
-	player.vehicle		= player.data.vehicle;
-	player.sprite_index	= player.vehicle.sprite;
-	player.hp			= player.vehicle.hp;
+	player.sprite_index	= player.data.vehicle.sprite;
+	player.hp			= player.data.vehicle.hp;
 	
 	return player;
 }

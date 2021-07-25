@@ -2,50 +2,52 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function key_actions(){	
 	if (up) {
-		var turnSpeed = vehicle.turnSpeed * specMultiplier * sign(cos(direction*pi/180));
+		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * sign(cos(direction*pi/180));
 		if(sin(direction*pi/180) != 1) direction += turnSpeed;
 	}
 
 	if (down) {
-		var turnSpeed = vehicle.turnSpeed * specMultiplier * -sign(cos(direction*pi/180));
+		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * -sign(cos(direction*pi/180));
 		if(sin(direction*pi/180) != -1) direction += turnSpeed;
 	}
 
 	if (left) {
-		var turnSpeed = vehicle.turnSpeed * specMultiplier * sign(sin(direction*pi/180));
+		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * sign(sin(direction*pi/180));
 		if(cos(direction*pi/180) != -1) direction += turnSpeed;
 	}
 
 	if (right) {
-		var turnSpeed = vehicle.turnSpeed * specMultiplier * -sign(sin(direction*pi/180));
+		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * -sign(sin(direction*pi/180));
 		if(cos(direction*pi/180) != 1) direction += turnSpeed;
 	}
 
-	if (accel) speed = approach(speed,vehicle.speed * specMultiplier,0.1);
-	else if (reverse) speed = approach(speed,-vehicle.speed * specMultiplier,0.1);
+	if (accel) speed = approach(speed,data.vehicle.speed * specMultiplier,0.1);
+	else if (reverse) speed = approach(speed,-data.vehicle.speed * specMultiplier,0.1);
 	else speed = approach(speed,0,0.1);
 	
 	if (fire1 && !is_undefined(shotObject)) {
 		var shots = 0;
 		with (shotObject) if (creator == other.id) shots++;
 		
-		if (shots < vehicle.maxBurst && (current_time - shotTimeStamp) >= vehicle.burstInterval) {
-			var data = variable_instance_get(id,"data");
-			if (!is_undefined(data)) data.stats.totalShots++;
+		if (shots < data.vehicle.maxBurst && (current_time - shotTimeStamp) >= data.vehicle.burstInterval) {
+			var stats = variable_struct_get(data, "stats");
+			if (!is_undefined(stats) && is_struct(stats)) stats.totalShots++;
 			var angle = direction + random_range(-1,1);
 			var shot = instance_create_depth(x,y,depth+1,shotObject);
-			shot.image_xscale	= vehicle.ammo.xScale;
-			shot.image_yscale	= vehicle.ammo.yScale;
+			shot.image_xscale	= data.vehicle.ammo.xScale;
+			shot.image_yscale	= data.vehicle.ammo.yScale;
 			shot.creator		= id;
 			shot.playerNumber	= number;
-			shot.sprite_index	= vehicle.ammo.sprite;
-			shot.speed			= vehicle.ammo.speed;
+			shot.sprite_index	= data.vehicle.ammo.sprite;
+			shot.speed			= data.vehicle.ammo.speed;
 			shot.direction		= angle;
-			shot.hp				= vehicle.ammo.hp * specMultiplier;
+			shot.hp				= data.vehicle.ammo.hp * specMultiplier;
 			shotTimeStamp		= current_time;
 		}
 		
-		if (!is_undefined(machineGun)) {
+		var machineGun = variable_struct_get(data.vehicle, "machineGun");
+		
+		if (!is_undefined(machineGun) && is_struct(machineGun)) {
 			var machineGunShots = 0;
 			with (ObjectPlayerMachineGunShot) if (creator == other.id) machineGunShots++;
 		

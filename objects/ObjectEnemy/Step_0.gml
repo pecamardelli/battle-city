@@ -16,7 +16,7 @@ if (enabled) {
 	if (nearestTarget != noone) {
 		var nearestTargetDistance = point_distance(x,y,nearestTarget.x,nearestTarget.y);
 		var angleDifference = abs(angle_difference(direction, point_direction(x,y,nearestTarget.x,nearestTarget.y)));
-		if (nearestTargetDistance <= vehicle.engageDistance && angleDifference <= vehicle.engageMaxAngle/2 && !nearestTarget.invisible) ai_engage_target();
+		if (nearestTargetDistance <= data.vehicle.engageDistance && angleDifference <= data.vehicle.engageMaxAngle/2 && !nearestTarget.invisible) ai_engage_target();
 		else moveScript();
 	}
 	else moveScript();

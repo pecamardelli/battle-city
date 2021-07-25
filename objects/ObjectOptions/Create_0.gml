@@ -103,7 +103,7 @@ for (var i=0;i<11;i++) {
 	yPos			+= separation;
 }
 
-var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
+//var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
 
 // Misc
 var xPos = room_width*0.75 + rowWidth/2 - 40;
@@ -114,6 +114,7 @@ checkBox.checked = global.friendlyFire;
 
 function setFriendlyFire () {
 	global.friendlyFire = !global.friendlyFire;
+	checked = global.friendlyFire;
 };
 
 checkBox.onClickAction = setFriendlyFire;

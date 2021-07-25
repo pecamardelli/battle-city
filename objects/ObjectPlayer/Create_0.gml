@@ -27,3 +27,5 @@ toAlpha	= 1;
 
 machineGunShotTimeStamp	= 0;
 machineGunOffset		= 15;
+
+prize_invulnerability();

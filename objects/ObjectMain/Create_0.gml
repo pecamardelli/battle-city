@@ -11,47 +11,114 @@ global.player2 = new PlayerData();
 
 load_ini_file();
 
+global.sounds = {
+	environment: {
+		collision: {
+			bulletOnMetal: [
+				SoundBulletImpactMetal01,
+				SoundBulletImpactMetal02
+			],
+			bulletOnConcrete: [
+				SoundBulletImpactConcrete01,
+				SoundBulletImpactConcrete02
+			],
+			cannonOnConcrete: [
+				SoundCannonImpactConcrete01,
+				SoundCannonImpactConcrete02,
+				SoundCannonImpactConcrete03
+			]
+		},
+		dirt: [
+			SoundDirt01,
+			SoundDirt02,
+			SoundDirt03,
+			SoundDirt04,
+			SoundDirt05,
+			SoundDirt06
+		]
+	},
+	ammo: {
+		tank: [
+			SoundTankAmmo01,
+			SoundTankAmmo02,
+			SoundTankAmmo03,
+			SoundTankAmmo04
+		],
+		machineGun: [
+			SoundMachineGunAmmo01,
+			SoundMachineGunAmmo02
+		]
+	},
+	explosions: {
+		big: [
+			SoundExplosion01,
+			SoundExplosion02,
+			SoundExplosion03,
+			SoundExplosion04,
+			SoundExplosion05,
+			SoundExplosion06,
+			SoundExplosion07
+		],
+		tiny: [
+			SoundTinyExplosion01,
+			SoundTinyExplosion02
+		]
+	}
+};
+
 global.ammo	= [
-	new Ammo(SpriteAmmo01,10,10,c_white,0.5,1),
-	new Ammo(SpriteAmmo01,10,11,c_dkgray,0.5,1),
-	new Ammo(SpriteAmmo02,35,12,c_white,0.5,1),
-	new Ammo(SpriteAmmo02,40,14,c_yellow,0.5,1),
+	new Ammo(SpriteAmmo01,10,10,c_white,0.5,1,global.sounds.ammo.tank[0]),
+	new Ammo(SpriteAmmo01,15,11,c_dkgray,0.5,1,global.sounds.ammo.tank[1]),
+	new Ammo(SpriteAmmo02,35,12,c_white,0.5,1,global.sounds.ammo.tank[2]),
+	new Ammo(SpriteAmmo02,40,14,c_yellow,0.5,1,global.sounds.ammo.tank[3]),
 ];
 
 global.machineGuns = [
 	new MachineGun(
-		new Ammo(SpriteAmmo01,2,15,c_white,0.2,0.4),
+		new Ammo(
+			SpriteAmmo01,
+			2,
+			15,
+			c_white,
+			0.2,
+			0.4,
+			global.sounds.ammo.machineGun[irandom(array_length(global.sounds.ammo.machineGun)-1)]
+		),
 		8,
 		180,
+		0,
 		0
 	)
 ];
 
 global.tanks	= [
-	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],1,300,50,400,90,100,undefined),
-	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],2,250,120,420,105,400,undefined),
-	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,350,150,460,120,2000,undefined),
-	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,400,200,500,150,4000,undefined)
+	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],1,300,50,400,90,100,undefined,SoundTankEngine01,0),
+	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],2,250,120,420,105,400,undefined,SoundTankEngine02,0),
+	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,350,150,460,120,2000,undefined,SoundTankEngine03,0),
+	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,400,200,500,150,4000,undefined,SoundTankEngine04,0)
 ];
 
-global.player1.vehicle = json_parse(json_stringify(global.tanks[3]));
+global.player1.vehicle = json_parse(json_stringify(global.tanks[0]));
 global.player2.vehicle = json_parse(json_stringify(global.tanks[0]));
 
 global.prizes = [
 	{
 		sprite: SpriteStar,
 		color: c_red,
-		script: prize_star
+		script: prize_star,
+		sound: SoundPrizeTaken
 	},
 	{
 		sprite: SpriteWrench,
 		color: c_green,
-		script: prize_health
+		script: prize_health,
+		sound: SoundPrizeTaken
 	},
 	{
 		sprite: SpriteSpeedUp,
 		color: c_orange,
-		script: prize_speed
+		script: prize_speed,
+		sound: SoundPrizeTaken
 	},
 	//{
 	//	sprite: SpritePrizeAccel,
@@ -61,32 +128,38 @@ global.prizes = [
 	{
 		sprite: SpriteGrenade,
 		color: c_silver,
-		script: prize_blow_all
+		script: prize_blow_all,
+		sound: SoundPrizeTaken
 	},
 	{
 		sprite: SpriteClock,
 		color: c_yellow,
-		script: prize_freeze_all
+		script: prize_freeze_all,
+		sound: SoundPrizeTaken
 	},
 	{
 		sprite: SpriteHelmet,
 		color: c_ltgrey,
-		script: prize_invulnerability
+		script: prize_invulnerability,
+		sound: SoundPrizeTaken
 	},
 	{
 		sprite: SpriteTank,
 		color: c_teal,
-		script: prize_life
+		script: prize_life,
+		sound: SoundExtraLife
 	},
 	{
 		sprite: SpriteInvisibility,
 		color: c_ltgrey,
-		script: prize_invisibility
+		script: prize_invisibility,
+		sound: SoundPrizeTaken
 	},
 	{
 		sprite: SpriteMachineGun,
 		color: make_color_rgb(192,0,0),
-		script: prize_machine_gun
+		script: prize_machine_gun,
+		sound: SoundPrizeTaken
 	}
 ];
 

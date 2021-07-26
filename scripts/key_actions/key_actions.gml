@@ -43,6 +43,7 @@ function key_actions(){
 			shot.direction		= angle;
 			shot.hp				= data.vehicle.ammo.hp * specMultiplier;
 			shotTimeStamp		= current_time;
+			audio_play_sound_at(data.vehicle.ammo.sound,x,y,0,100,300,1,false,1);
 		}
 		
 		var machineGun = variable_struct_get(data.vehicle, "machineGun");
@@ -65,7 +66,6 @@ function key_actions(){
 				machineGunShot.direction	= angle;
 				machineGunShot.hp			= machineGun.ammo.hp;
 				
-				
 				var machineGunShot = instance_create_depth(x,y,depth+1,ObjectPlayerMachineGunShot);
 				machineGunShot.x			= x + machineGunOffset * sin(image_angle*pi/180);
 				machineGunShot.y			= y + machineGunOffset * cos(image_angle*pi/180);
@@ -80,6 +80,7 @@ function key_actions(){
 				machineGunShotTimeStamp		= current_time;
 				
 				machineGunShotTimeStamp		= current_time;
+				audio_play_sound_at(machineGun.ammo.sound,x,y,0,100,300,1,false,1);
 			}
 		}
 	}

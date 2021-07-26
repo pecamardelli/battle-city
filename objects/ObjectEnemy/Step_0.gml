@@ -20,6 +20,7 @@ if (enabled) {
 		else moveScript();
 	}
 	else moveScript();
+	if (is_undefined(engineSound)) engineSound = audio_play_sound_on(soundEmitter,data.vehicle.engineSound,true,1);
 	
 	key_actions();
 }
@@ -33,5 +34,7 @@ if (hasPrize) {
 }
 
 image_angle = direction;
-
+audio_emitter_position(soundEmitter,x,y,0);
+audio_emitter_gain(soundEmitter, lerp(0.6,0.8,speed/data.vehicle.speed));
+audio_emitter_pitch(soundEmitter, lerp(0.8,1.2,speed/data.vehicle.speed));
 stay_in_room_bounds();

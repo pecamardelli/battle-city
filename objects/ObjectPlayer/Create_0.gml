@@ -3,6 +3,7 @@
 enabled			= false;
 invulnerable	= false;
 invisible		= false;
+material		= MATERIAL_METAL;
 number			= undefined;
 data			= undefined;
 
@@ -28,4 +29,6 @@ toAlpha	= 1;
 machineGunShotTimeStamp	= 0;
 machineGunOffset		= 15;
 
+soundEmitter = audio_emitter_create();
+engineSound = undefined;
 prize_invulnerability();

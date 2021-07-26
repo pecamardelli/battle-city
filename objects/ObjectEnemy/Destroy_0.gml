@@ -10,3 +10,5 @@ if (hasPrize) {
 	
 	prize.prize = global.prizes[irandom(array_length(global.prizes)-1)];
 }
+
+audio_emitter_free(soundEmitter);

@@ -13,5 +13,6 @@ function prize_machine_gun(){
 		machineGun.ammo.yScale	 *= 1.05;
 		machineGun.maxBurst++;
 		machineGun.burstInterval *= 0.95;
+		machineGun.stage++;
 	}
 }

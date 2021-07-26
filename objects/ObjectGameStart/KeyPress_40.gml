@@ -1,5 +1,6 @@
 /// @description Insert description here
 
 if (menuEntryPosition < menuEntryNumber - 1) {
-	menuEntryPosition++;	
+	menuEntryPosition++;
+	audio_play_sound(SoundButtonRollOver,1,false);
 }

@@ -8,4 +8,16 @@ if (!exploding) {
 	hspeed = 0;
 	vspeed = 0;
 	exploding = true;
+	
+	audio_play_sound_at(
+		SoundBulletOnShield,
+		x,
+		y,
+		0,
+		100,
+		300,
+		1,
+		false,
+		1
+	);
 }

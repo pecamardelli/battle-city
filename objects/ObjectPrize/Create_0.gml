@@ -16,3 +16,5 @@ scale			= fromScale;
 scaleStep		= 0.01;
 
 prize	= undefined;
+
+audio_play_sound(SoundPrizeCreated,1,false);

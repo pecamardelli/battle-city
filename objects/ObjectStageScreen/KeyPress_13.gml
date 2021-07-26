@@ -1,3 +1,6 @@
 /// @description Insert description here
 
-if (alpha >= 1) fade_screen(FADE_OUT,FADE_TIME,undefined,RoomBattleField);
+if (alpha >= 1) {
+	audio_play_sound(SoundGameStartMusic,1,false);
+	alarm_set(0,room_speed*2);
+}

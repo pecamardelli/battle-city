@@ -6,4 +6,5 @@ if (menuEntryAlpha == 1) {
 		global.playerNumber = menuEntryPosition + 1;
 		fade_screen(FADE_OUT,FADE_TIME,undefined,RoomStageScreen);
 	}
+	audio_play_sound(SoundButtonClick,1,false);
 }

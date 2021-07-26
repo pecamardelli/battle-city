@@ -21,7 +21,17 @@ if (enabled) {
 		case INPUT_JOYSTICK: get_pad_values(4, data.keys); break;
 	}
 	
+	if (is_undefined(engineSound)) engineSound = audio_play_sound_on(soundEmitter,data.vehicle.engineSound,true,1);
+	
 	key_actions();
 }
 
+audio_emitter_position(soundEmitter,x,y,0);
+audio_emitter_gain(soundEmitter, lerp(0.8,1,abs(speed)/data.vehicle.speed));
+audio_emitter_pitch(soundEmitter, lerp(0.8,1.2,abs(speed)/data.vehicle.speed));
 stay_in_room_bounds();
+
+audio_listener_position(x,y,0);
+
+// Dirt sounds
+//if (speed > 0 && alarm_get(0) <= -1) alarm_set(0,5);

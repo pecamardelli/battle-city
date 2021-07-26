@@ -7,7 +7,7 @@ function macros(){
 	#macro	FALSE					"false"
 	
 	#macro	LEVELS					1000
-	#macro	PRIZE_PROBABILITY		25
+	#macro	PRIZE_PROBABILITY		40
 	
 	#macro	FADE_IN					0x00
 	#macro	FADE_OUT				0x01
@@ -23,6 +23,9 @@ function macros(){
 	#macro	INVULNERABILITY_TIME	20
 	#macro	INVISIBILITY_TIME		20
 	#macro	INVISIBILITY_ALPHA		0.2
+	
+	#macro	MATERIAL_CONCRETE		0x00
+	#macro	MATERIAL_METAL			0x01
 	
 	// Logger
 	#macro LOG_INFO		"[INFO]"

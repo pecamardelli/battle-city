@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "SoundTruckEngine02.wav",
-  "duration": 2.678277,
+  "duration": 1.879864,
   "parent": {
     "name": "Engines",
     "path": "folders/Sounds/Vehicles/Trucks/Engines.yy",

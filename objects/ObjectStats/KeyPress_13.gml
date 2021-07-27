@@ -1,8 +1,8 @@
 /// @description Insert description here
 if (alpha >= 1) {
-	global.stageData.number++;
-	global.stageData.vehicleNumber		= round(global.stageData.vehicleNumber*1.1);
-	global.stageData.vehicleConcurrency	= round(global.stageData.vehicleConcurrency*1.05);
-	global.stageData.vehicleInterval	= round(global.stageData.vehicleInterval*0.95);
+	global.stageNumber++;
+	//global.stageData.vehicleNumber		= round(global.stageData.vehicleNumber*1.1);
+	//if (global.stageData.vehicleConcurrency < MAX_VEHICLE_CONCURRENCY) global.stageData.vehicleConcurrency += 0.5;
+	//global.stageData.vehicleInterval	= global.stageData.vehicleInterval*0.98;
 	fade_screen(FADE_OUT,FADE_TIME,undefined,RoomStageScreen);
 }

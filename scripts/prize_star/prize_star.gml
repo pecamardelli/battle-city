@@ -6,4 +6,13 @@ function prize_star(){
 	data.vehicle.ammo.speed *= 1.03;
 	data.vehicle.ammo.hp *= 1.03;
 	data.vehicle.stage++;
+	
+	if (data.vehicle.stage == 5 && data.vehicleIndex < array_length(global.tanks) - 1) {
+		data.vehicleIndex++;
+		data.vehicle = json_parse(json_stringify(global.tanks[data.vehicleIndex]));
+		sprite_index	= data.vehicle.sprite;
+		hp				= data.vehicle.hp;
+		audio_stop_sound(engineSound);
+		engineSound		= undefined;
+	}
 }

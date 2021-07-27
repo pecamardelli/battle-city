@@ -46,5 +46,6 @@ function PlayerData() constructor {
 	
 	stats = new PlayerStats();
 	vehicle	= undefined;
+	vehicleIndex = undefined;
 	tanks = 3;
 }

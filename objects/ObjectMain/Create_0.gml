@@ -91,15 +91,17 @@ global.machineGuns = [
 	)
 ];
 
-global.tanks	= [
-	new Vehicle(SpriteTank01,2,0.1,2,global.ammo[0],1,300,50,400,90,100,undefined,SoundTankEngine01,0),
-	new Vehicle(SpriteTank02,2.8,0.15,2.3,global.ammo[1],2,250,120,420,105,400,undefined,SoundTankEngine02,0),
-	new Vehicle(SpriteTank03,2.3,0.12,1.7,global.ammo[2],5,350,150,460,120,2000,undefined,SoundTankEngine03,0),
-	new Vehicle(SpriteTank04,1.9,0.08,1.5,global.ammo[3],3,400,200,500,150,4000,undefined,SoundTankEngine04,0)
+global.tanks = [
+	new Vehicle(SpriteTank01,2,0.1,1.9,global.ammo[0],1,300,50,400,90,100,undefined,SoundTankEngine01,0),
+	new Vehicle(SpriteTank02,2.2,0.15,2,global.ammo[1],2,250,70,420,105,400,undefined,SoundTankEngine02,0),
+	new Vehicle(SpriteTank03,1.9,0.09,1.6,global.ammo[2],5,350,150,460,120,2000,undefined,SoundTankEngine03,0),
+	new Vehicle(SpriteTank04,1.75,0.08,1.3,global.ammo[3],3,400,200,500,150,4000,undefined,SoundTankEngine04,0)
 ];
 
 global.player1.vehicle = json_parse(json_stringify(global.tanks[0]));
+global.player1.vehicleIndex = 0;
 global.player2.vehicle = json_parse(json_stringify(global.tanks[0]));
+global.player2.vehicleIndex = 0;
 
 global.prizes = [
 	{
@@ -108,59 +110,54 @@ global.prizes = [
 		script: prize_star,
 		sound: SoundPrizeTaken
 	},
-	{
-		sprite: SpriteWrench,
-		color: c_green,
-		script: prize_health,
-		sound: SoundPrizeTaken
-	},
-	{
-		sprite: SpriteSpeedUp,
-		color: c_orange,
-		script: prize_speed,
-		sound: SoundPrizeTaken
-	},
 	//{
-	//	sprite: SpritePrizeAccel,
-	//	color: c_olive,
-	//	script: prize_accel
+	//	sprite: SpriteWrench,
+	//	color: c_green,
+	//	script: prize_health,
+	//	sound: SoundPrizeTaken
 	//},
-	{
-		sprite: SpriteGrenade,
-		color: c_silver,
-		script: prize_blow_all,
-		sound: SoundPrizeTaken
-	},
-	{
-		sprite: SpriteClock,
-		color: c_yellow,
-		script: prize_freeze_all,
-		sound: SoundPrizeTaken
-	},
-	{
-		sprite: SpriteHelmet,
-		color: c_ltgrey,
-		script: prize_invulnerability,
-		sound: SoundPrizeTaken
-	},
-	{
-		sprite: SpriteTank,
-		color: c_teal,
-		script: prize_life,
-		sound: SoundExtraLife
-	},
-	{
-		sprite: SpriteInvisibility,
-		color: c_ltgrey,
-		script: prize_invisibility,
-		sound: SoundPrizeTaken
-	},
-	{
-		sprite: SpriteMachineGun,
-		color: make_color_rgb(192,0,0),
-		script: prize_machine_gun,
-		sound: SoundPrizeTaken
-	}
+	//{
+	//	sprite: SpriteSpeedUp,
+	//	color: c_orange,
+	//	script: prize_speed,
+	//	sound: SoundPrizeTaken
+	//},
+	//{
+	//	sprite: SpriteGrenade,
+	//	color: c_silver,
+	//	script: prize_blow_all,
+	//	sound: SoundPrizeTaken
+	//},
+	//{
+	//	sprite: SpriteClock,
+	//	color: c_yellow,
+	//	script: prize_freeze_all,
+	//	sound: SoundPrizeTaken
+	//},
+	//{
+	//	sprite: SpriteHelmet,
+	//	color: c_ltgrey,
+	//	script: prize_invulnerability,
+	//	sound: SoundPrizeTaken
+	//},
+	//{
+	//	sprite: SpriteTank,
+	//	color: c_teal,
+	//	script: prize_life,
+	//	sound: SoundExtraLife
+	//},
+	//{
+	//	sprite: SpriteInvisibility,
+	//	color: c_ltgrey,
+	//	script: prize_invisibility,
+	//	sound: SoundPrizeTaken
+	//},
+	//{
+	//	sprite: SpriteMachineGun,
+	//	color: make_color_rgb(192,0,0),
+	//	script: prize_machine_gun,
+	//	sound: SoundPrizeTaken
+	//}
 ];
 
 global.explosions = [
@@ -189,14 +186,7 @@ global.padButtons[? gp_shoulderrb]	= SpriteR2;
 global.padButtons[? gp_start]	= SpriteStar;
 global.padButtons[? gp_select]	= SpriteSelect;
 
-global.stageDataBase = {
-	vehicleConcurrency: 5,
-	vehicleNumber: 15,
-	vehicleInterval: 8,
-	number: 1
-};
-
-global.stageData = json_parse(json_stringify(global.stageDataBase));
+global.stageNumber			= 1;
 
 global.disableEnemies		= false;
 global.enemyFriendlyFire	= false;

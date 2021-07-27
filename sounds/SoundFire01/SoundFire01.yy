@@ -11,10 +11,10 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "SoundFire01.wav",
-  "duration": 0.567392,
+  "duration": 8.546168,
   "parent": {
-    "name": "Concrete",
-    "path": "folders/Sounds/Environment/Concrete.yy",
+    "name": "Battle City",
+    "path": "Battle City.yyp",
   },
   "resourceVersion": "1.0",
   "name": "SoundFire01",

@@ -4,11 +4,12 @@ function create_enemy(enabled){
 	var enemy				= instance_create_depth(x,y,-100,ObjectEnemy);
 	enemy.enabled			= enabled;
 	
-	var tanksKilled			= global.stageData.vehicleNumber - ObjectBattleField.stageData.vehicleNumber;
-	var tankKillRatio		= tanksKilled/global.stageData.vehicleNumber;
+	var tanksToKill			= global.stageNumber + STAGE_VEHICLE_NUMBER;
+	var tanksKilled			= tanksToKill - ObjectBattleField.vehicleNumber;
+	var tankKillRatio		= tanksKilled/tanksToKill;
 	
 	if (random(1) > 0.9 && tankKillRatio > 0.8) var tankIndex = floor((array_length(global.tanks) - 1)*irandom_range(tankKillRatio, 1));
-	else var tankIndex = floor(global.stageData.number/10) + floor(tanksKilled/10);
+	else var tankIndex = floor(global.stageNumber/10) + floor(tanksKilled/10);
 	
 	// Prevent tankIndex to fall outside the tank array
 	if (tankIndex >= array_length(global.tanks)) tankIndex = array_length(global.tanks) - 1;

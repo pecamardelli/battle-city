@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "SoundExplosion04.wav",
-  "duration": 5.367846,
+  "duration": 6.294921,
   "parent": {
     "name": "Explosions",
     "path": "folders/Sounds/Explosions.yy",

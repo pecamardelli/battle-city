@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "SoundFire02.wav",
-  "duration": 8.546168,
+  "duration": 8.621134,
   "parent": {
     "name": "Fire",
     "path": "folders/Sounds/Environment/Fire.yy",

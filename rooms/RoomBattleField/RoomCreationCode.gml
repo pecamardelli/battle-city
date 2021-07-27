@@ -1,6 +1,4 @@
 var battleField = instance_create_depth(0,0,0,ObjectBattleField);
-battleField.stageData = json_parse(json_stringify(global.stageData));
-battleField.alarm[0] = room_speed*battleField.stageData.vehicleInterval;
 
 global.disableEnemies = false;
 cursor_sprite = -1;

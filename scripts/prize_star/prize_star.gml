@@ -7,7 +7,7 @@ function prize_star(){
 	data.vehicle.ammo.hp *= 1.03;
 	data.vehicle.stage++;
 	
-	if (data.vehicle.stage == 5 && data.vehicleIndex < array_length(global.tanks) - 1) {
+	if (data.vehicle.stage == PRIZE_CHANGE_TANK_STARS && data.vehicleIndex < array_length(global.tanks) - 1) {
 		data.vehicleIndex++;
 		data.vehicle = json_parse(json_stringify(global.tanks[data.vehicleIndex]));
 		sprite_index	= data.vehicle.sprite;

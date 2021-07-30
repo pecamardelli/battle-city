@@ -1,9 +1,8 @@
-FIXES
-=====
+CHANGES
+=======
 
  - Make tanks appear faster.						(X)
  - Make steering smoother.							(X)
  - Make machine gun persistent between tanks.		(X)
- - Make tank speed persistent.
- - Increase invulnerability time.
+ - Increase invulnerability time.					(X)
  

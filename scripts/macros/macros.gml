@@ -8,6 +8,7 @@ function macros(){
 	
 	#macro	LEVELS					1000
 	#macro	PRIZE_PROBABILITY		40
+	#macro	PRIZE_CHANGE_TANK_STARS	5
 	
 	#macro	FADE_IN					0x00
 	#macro	FADE_OUT				0x01

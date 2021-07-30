@@ -5,8 +5,6 @@ show_debug_message("Pad = " + string(async_load[? "pad_index"]));   // triggered
 
 switch (async_load[? "event_type"]) {
 	case "gamepad discovered": 
-		
-
 		if (global.player1.input == INPUT_JOYSTICK && is_undefined(global.player1.padIndex)) {
 			global.player1.padIndex = async_load[? "pad_index"];
 			show_debug_message("Pad " + string(async_load[? "pad_index"]) + " assigned to player 1");

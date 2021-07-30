@@ -44,8 +44,10 @@ function PlayerData() constructor {
 		}
 	};
 	
-	stats = new PlayerStats();
-	vehicle	= undefined;
-	vehicleIndex = undefined;
-	tanks = 3;
+	stats			= new PlayerStats();
+	vehicle			= undefined;
+	vehicleIndex	= undefined;
+	machineGun		= undefined;
+	machineGunIndex	= undefined;
+	tanks			= 3;
 }

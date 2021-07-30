@@ -7,7 +7,7 @@ function macros(){
 	#macro	FALSE					"false"
 	
 	#macro	LEVELS					1000
-	#macro	PRIZE_PROBABILITY		100
+	#macro	PRIZE_PROBABILITY		40
 	
 	#macro	FADE_IN					0x00
 	#macro	FADE_OUT				0x01
@@ -16,8 +16,11 @@ function macros(){
 	#macro	STAGE_VEHICLE_NUMBER			15
 	#macro	STAGE_VEHICLE_CONCURRENCY		10
 	#macro	STAGE_MAX_VEHICLE_CONCURRENCY	10
-	#macro	STAGE_VEHICLE_INTERVAL			8
-	#macro	STAGE_MAX_VEHICLE_INTERVAL		3
+	#macro	STAGE_VEHICLE_INTERVAL			5
+	#macro	STAGE_MAX_VEHICLE_INTERVAL		2
+	
+	#macro	MOVE_ACCEL_STEP			0.2
+	#macro	MOVE_ANGLE_THRESHOLD	0.999
 	
 	#macro	INPUT_KEYBOARD			"keyboard"
 	#macro	INPUT_JOYSTICK			"joystick"

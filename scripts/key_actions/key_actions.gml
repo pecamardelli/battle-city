@@ -1,26 +1,40 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function key_actions(){	
+function key_actions() {
 	if (up) {
-		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * sign(cos(direction*pi/180));
-		if(sin(direction*pi/180) != 1) direction += turnSpeed;
+		turnSpeed = approach(turnSpeed,data.vehicle.turnSpeed * specMultiplier * sign(cos(direction*pi/180)),MOVE_ACCEL_STEP);
+		if(sin(direction*pi/180) >= MOVE_ANGLE_THRESHOLD) {
+			turnSpeed = 0;
+			direction = 90;
+		}
 	}
-
-	if (down) {
-		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * -sign(cos(direction*pi/180));
-		if(sin(direction*pi/180) != -1) direction += turnSpeed;
+	else if (down) {
+		turnSpeed = approach(turnSpeed,data.vehicle.turnSpeed * specMultiplier * -sign(cos(direction*pi/180)),MOVE_ACCEL_STEP);
+		if(sin(direction*pi/180) <= -MOVE_ANGLE_THRESHOLD) {
+			turnSpeed = 0;
+			direction = 270;
+		}
 	}
-
-	if (left) {
-		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * sign(sin(direction*pi/180));
-		if(cos(direction*pi/180) != -1) direction += turnSpeed;
+	else if (left) {
+		turnSpeed = approach(turnSpeed,data.vehicle.turnSpeed * specMultiplier * sign(sin(direction*pi/180)),MOVE_ACCEL_STEP);
+		if(cos(direction*pi/180) <= -MOVE_ANGLE_THRESHOLD) {
+			turnSpeed = 0;
+			direction = 180;
+		}
 	}
-
-	if (right) {
-		var turnSpeed = data.vehicle.turnSpeed * specMultiplier * -sign(sin(direction*pi/180));
-		if(cos(direction*pi/180) != 1) direction += turnSpeed;
+	else if (right) {
+		turnSpeed = approach(turnSpeed,data.vehicle.turnSpeed * specMultiplier * -sign(sin(direction*pi/180)),MOVE_ACCEL_STEP);
+		if(cos(direction*pi/180) >= MOVE_ANGLE_THRESHOLD) {
+			turnSpeed = 0;
+			direction = 0;
+		}
 	}
-
+	else {
+		turnSpeed = approach(turnSpeed,0,MOVE_ACCEL_STEP);
+	}
+	
+	direction += turnSpeed;
+	
 	if (accel) speed = approach(speed,data.vehicle.speed * specMultiplier,0.1);
 	else if (reverse) speed = approach(speed,-data.vehicle.speed * specMultiplier,0.1);
 	else speed = approach(speed,0,0.1);
@@ -46,7 +60,7 @@ function key_actions(){
 			audio_play_sound_at(data.vehicle.ammo.sound,x,y,0,100,300,1,false,1);
 		}
 		
-		var machineGun = variable_struct_get(data.vehicle, "machineGun");
+		var machineGun = variable_struct_get(data, "machineGun");
 		
 		if (!is_undefined(machineGun) && is_struct(machineGun)) {
 			var machineGunShots = 0;

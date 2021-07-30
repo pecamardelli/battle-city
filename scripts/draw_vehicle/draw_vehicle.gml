@@ -5,7 +5,7 @@ function draw_vehicle () {
 		draw_sprite_ext(sprite_index,image_index,x+10,y+10,image_xscale,image_yscale,direction,c_black,toAlpha-0.2);
 		draw_self();
 	
-		if (!is_undefined(data.vehicle.machineGun)) {
+		if (!is_undefined(data.machineGun)) {
 			draw_sprite_ext(
 				SpriteBulletCanon,
 				0,

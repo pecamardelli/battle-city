@@ -1,0 +1,7 @@
+FEATURES
+========
+
+ - Pause feature.
+ - Save game feature.
+ - Implement Jeeps and Trucks.
+ - Implement missiles.

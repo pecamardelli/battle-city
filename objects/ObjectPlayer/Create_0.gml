@@ -12,6 +12,7 @@ image_yscale	= 0.3;
 
 status			= STATUS_HEALTHY;
 hp				= 100;
+turnSpeed		= 0;
 score			= 0;
 vehicle			= undefined;
 shieldId		= undefined;

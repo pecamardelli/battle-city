@@ -12,7 +12,6 @@ function Vehicle(
 	_engageDistance,
 	_engageMaxAngle,
 	_points,
-	_machineGun,
 	_engineSound,
 	_stage
 ) constructor {
@@ -27,7 +26,6 @@ function Vehicle(
 	engageDistance	= _engageDistance;
 	engageMaxAngle	= _engageMaxAngle;
 	points			= _points;
-	machineGun		= _machineGun;
 	engineSound		= _engineSound;
 	stage			= _stage;
 }

@@ -7,7 +7,13 @@ image_xscale	= 0.3;
 image_yscale	= 0.3;
 hp				= 100;
 status			= STATUS_HEALTHY;
-data			= { vehicle: undefined };
+turnSpeed		= 0;
+
+data = {
+	vehicle: undefined,
+	machineGun: undefined
+};
+
 number			= undefined;
 specMultiplier	= 0.4;
 keys			= undefined;

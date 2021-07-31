@@ -1,8 +1,2 @@
-CHANGES
-=======
 
- - Make tanks appear faster.						(X)
- - Make steering smoother.							(X)
- - Make machine gun persistent between tanks.		(X)
- - Increase invulnerability time.					(X)
  

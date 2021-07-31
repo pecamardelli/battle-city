@@ -1,0 +1,10 @@
+VERSION 0.9 - Minimal Viable Product 29/07/2021
+===============================================
+
+CHANGES
+=======
+
+ - Make tanks appear faster.						(X)
+ - Make steering smoother.							(X)
+ - Make machine gun persistent between tanks.		(X)
+ - Increase invulnerability time.					(X)

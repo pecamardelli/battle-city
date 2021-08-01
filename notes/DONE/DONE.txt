@@ -38,3 +38,8 @@ VERSION 0.92.1 - Fix several buds 01/08/2021
  - At options screen, player keys showed are different than the key that was set.
  - Machine gun sprite not showing properly.
  
+VERSION 0.92.2 - Little bug fix 01/08/2021
+==========================================
+
+ - Total player shots not counting properly.
+ 

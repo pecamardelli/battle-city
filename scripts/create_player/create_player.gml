@@ -16,6 +16,5 @@ function create_player(playerNumber){
 	player.sprite_index	= player.data.vehicle.sprite;
 	player.hp			= player.data.vehicle.hp;
 	
-with (player) prize_machine_gun();
 	return player;
 }

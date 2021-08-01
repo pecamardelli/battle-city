@@ -32,5 +32,3 @@ CHANGES
  
 BUGS
 ====
-
- - Total player shots not counting properly.

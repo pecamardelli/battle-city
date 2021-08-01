@@ -93,6 +93,9 @@ function key_actions() {
 				machineGunShot.hp			= machineGun.ammo.hp;
 				machineGunShotTimeStamp		= current_time;
 				
+				var stats = variable_struct_get(data, "stats");
+				if (!is_undefined(stats) && is_struct(stats)) stats.totalShots += 2;
+				
 				machineGunShotTimeStamp		= current_time;
 				audio_play_sound_at(machineGun.ammo.sound,x,y,0,100,300,1,false,1);
 			}

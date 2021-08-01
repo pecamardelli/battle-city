@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-if (hasPrize) {
+if (hasPrize && hp <= 0) {
 	var prize = instance_create_depth(
 		random_range(MIN_WALL_DISTANCE,room_width - MIN_WALL_DISTANCE),
 		random_range(MIN_WALL_DISTANCE,room_height - MIN_WALL_DISTANCE),

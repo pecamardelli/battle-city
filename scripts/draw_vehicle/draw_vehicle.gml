@@ -11,8 +11,8 @@ function draw_vehicle () {
 				0,
 				x - machineGunOffset * sin(image_angle*pi/180),
 				y - machineGunOffset * cos(image_angle*pi/180),
-				image_xscale,
-				image_yscale,
+				0.8,
+				0.8,
 				direction,
 				c_white,
 				image_alpha
@@ -22,8 +22,8 @@ function draw_vehicle () {
 				0,
 				x + machineGunOffset * sin(image_angle*pi/180),
 				y + machineGunOffset * cos(image_angle*pi/180),
-				image_xscale,
-				image_yscale,
+				0.8,
+				0.8,
 				direction,
 				c_white,
 				image_alpha

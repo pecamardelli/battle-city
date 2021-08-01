@@ -20,6 +20,7 @@ VERSION 0.91.1 - Pause Feature Changed 01/08/2021
 =================================================
  
  - Pause game with start key also.
+ - When pressing enter on stage screen, start stage music gets triggered on every press.
  
 VERSION 0.92 - Back to main menu from battefield 01/08/2021
 ===========================================================
@@ -27,3 +28,13 @@ VERSION 0.92 - Back to main menu from battefield 01/08/2021
  - Back to main menu from battefield.
  - Added sounds to button clicks and window open.
  - Button's onClickAction now supports array of arguments.
+ 
+VERSION 0.92.1 - Fix several buds 01/08/2021
+============================================
+
+ - Stage number changes when pressing enter on stats screen.
+ - Enemies do not aim to the player when their angle difference is between 0 and 90 degrees.
+ - When leaving battlefield before the end of the level, tanks with prize emit prize creation sound.
+ - At options screen, player keys showed are different than the key that was set.
+ - Machine gun sprite not showing properly.
+ 

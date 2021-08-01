@@ -25,14 +25,12 @@ CHANGES
 
  - Improve level creation.
  - Reduce invulnerability time when player is created on battlefield.
+ - Ask for confirmation when ending game.
+ - Show level stats at stats screen.
+ - Change color of tanks when improved.
+ - Change color of machine gun when improved.
  
 BUGS
 ====
 
- - When pressing enter on stage screen, start stage music gets triggered on every press.
- - Stage number changes when pressing enter on stats screen.
- - Enemies do not aim to the player when their angle difference is between 0 and 90 degrees.
- - When leaving battlefield before the end of the level, tanks with prize emit prize creation sound.
- - At options screen, player keys showed are different than the key that was set.
- - Machine gun sprite not showing properly.
  - Total player shots not counting properly.

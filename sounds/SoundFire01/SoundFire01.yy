@@ -13,8 +13,8 @@
   "soundFile": "SoundFire01.wav",
   "duration": 8.546168,
   "parent": {
-    "name": "Battle City",
-    "path": "Battle City.yyp",
+    "name": "Environment",
+    "path": "folders/Sounds/Environment.yy",
   },
   "resourceVersion": "1.0",
   "name": "SoundFire01",

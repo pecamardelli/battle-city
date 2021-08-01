@@ -5,10 +5,10 @@ frameWidth		= 10;
 frameRadius		= 20;
 frameColor		= make_color_rgb(128,0,0);
 
-rowWidth	= 400;
-row1width	= 212;
-row2width	= 100;
-separation	= 60;
+columnWidth		= 450;
+column1Width	= 212;
+column2Width	= 150;
+separation		= 60;
 
 var keyNames = [
 	"up",
@@ -28,7 +28,7 @@ var buttonWidth		= 80;
 var buttonHeight	= 35;
 
 // Player 1 column
-var xPos = room_width/4 + rowWidth/2 - buttonWidth;
+var xPos = room_width/4 + columnWidth/2 - buttonWidth;
 var yPos = 200;
 
 var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox); yPos += separation;
@@ -68,7 +68,7 @@ for (var i=0;i<11;i++) {
 // var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
 
 // Player 2 column
-var xPos = room_width/2 + rowWidth/2 - buttonWidth;
+var xPos = room_width/2 + columnWidth/2 - buttonWidth;
 var yPos = 200;
 
 var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox); yPos += separation;
@@ -108,7 +108,7 @@ for (var i=0;i<11;i++) {
 // var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox);
 
 // Misc
-var xPos = room_width*0.75 + rowWidth/2 - 40;
+var xPos = room_width*0.75 + columnWidth/2 - 40;
 var yPos = 200;
 
 var checkBox = instance_create_depth(xPos+buttonWidth/2-20,yPos-buttonHeight/2,depth-1,ObjectCheckBox); yPos += separation;

@@ -1,10 +1,8 @@
-FEATURES
-========
+BUGS FIXED
+==========
 
- - Back to main menu from battefield.
-
-CHANGES APPLIED
-===============
-
- - Added sounds to button clicks and window open.
- - Button's onClickAction now supports array of arguments.
+ - Stage number changes when pressing enter on stats screen.
+ - Enemies do not aim to the player when their angle difference is between 0 and 90 degrees.
+ - When leaving battlefield before the end of the level, tanks with prize emit prize creation sound.
+ - At options screen, player keys showed are different than the key that was set.
+ - Machine gun sprite not showing properly.

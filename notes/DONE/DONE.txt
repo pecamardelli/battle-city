@@ -20,3 +20,10 @@ VERSION 0.91.1 - Pause Feature Changed 01/08/2021
 =================================================
  
  - Pause game with start key also.
+ 
+VERSION 0.92 - Back to main menu from battefield 01/08/2021
+===========================================================
+ 
+ - Back to main menu from battefield.
+ - Added sounds to button clicks and window open.
+ - Button's onClickAction now supports array of arguments.

@@ -19,5 +19,6 @@ image_alpha		= 0;
 stepAction = undefined;
 drawScript = undefined;
 
+audio_play_sound(SoundWindowOpen,1,false);
 
 

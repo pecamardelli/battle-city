@@ -1,4 +1,10 @@
+FEATURES
+========
+
+ - Back to main menu from battefield.
+
 CHANGES APPLIED
 ===============
 
- - Pause game with start key also.
+ - Added sounds to button clicks and window open.
+ - Button's onClickAction now supports array of arguments.

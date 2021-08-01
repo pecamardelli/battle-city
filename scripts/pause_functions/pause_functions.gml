@@ -3,15 +3,33 @@
 function pause_game() {
 	audio_play_sound(SoundPause,1,false);
 	ObjectBattleField.gamePaused = true;
+	cursor_sprite		= SpriteCursor;
 	var windowX			= room_width/2;
 	var windowY			= room_height/2;
 	var windowWidth		= 400;
 	var windowHeight	= 200;
+	var windowDepth		= -10000;
 	
-	pauseWindow			= instance_create_depth(windowX,windowY,-10000,ObjectWindow);
-	pauseWindow.width	= windowWidth;
-	pauseWindow.height	= windowHeight;
-	pauseWindow.caption	= "GAME PAUSED";
+	pauseWindow				= instance_create_depth(windowX,windowY,windowDepth,ObjectWindow);
+	pauseWindow.width		= windowWidth;
+	pauseWindow.height		= windowHeight;
+	pauseWindow.caption		= "GAME PAUSED";
+	pauseWindow.captionY	= windowY - windowHeight/6;
+	
+	var backToMainMenuButtonWidth	= 180;
+	var backToMainMenuButtonHeight	= 50;
+	var backToMainMenuButton		= instance_create_depth(
+		windowX - backToMainMenuButtonWidth/2,
+		windowY + windowHeight/6 - backToMainMenuButtonHeight/2,
+		windowDepth-1,
+		ObjectButton
+	);
+	backToMainMenuButton.parent			= pauseWindow;
+	backToMainMenuButton.level			= pauseWindow.level;
+	backToMainMenuButton.caption		= "Back To Main Menu";
+	backToMainMenuButton.width			= backToMainMenuButtonWidth;
+	backToMainMenuButton.height			= backToMainMenuButtonHeight;
+	backToMainMenuButton.onClickAction	= [ confirm, "Finish this war?", [ fade_screen, FADE_OUT, FADE_TIME, undefined, RoomStart ] ];
 	
 	alarm0 = alarm_get(0);
 	alarm_set(0,-1);
@@ -20,7 +38,8 @@ function pause_game() {
 
 function resume_game() {
 	ObjectBattleField.gamePaused = false;
-	pauseWindow.close = true;
+	cursor_sprite = -1;
+	with(ObjectWindow) close = true;
 	with (ObjectEntity) unfreeze_object();
 	alarm_set(0,alarm0);
 }

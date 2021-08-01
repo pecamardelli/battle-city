@@ -13,17 +13,23 @@ if (status == STATUS_OUT_OF_COMBAT) {
 image_angle = direction;
 image_alpha = approach(image_alpha,toAlpha,0.1);
 
+init_keys();
+	
+switch (data.input) {
+	case INPUT_KEYBOARD: get_keys(); break;
+	case INPUT_JOYSTICK: get_pad_values(4, data.keys); break;
+}
+
 if (enabled) {
-	init_keys();
-	
-	switch (data.input) {
-		case INPUT_KEYBOARD: get_keys(); break;
-		case INPUT_JOYSTICK: get_pad_values(4, data.keys); break;
-	}
-	
 	if (is_undefined(engineSound)) engineSound = audio_play_sound_on(soundEmitter,data.vehicle.engineSound,true,1);
-	
 	key_actions();
+}
+
+if (start) {
+	with (ObjectBattleField) {
+		if(!gamePaused) pause_game();
+		else resume_game();
+	}
 }
 
 audio_emitter_position(soundEmitter,x,y,0);

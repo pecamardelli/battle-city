@@ -1,14 +1,4 @@
-FEATURES ADDED
-==============
-
- - Pause feature.
- 
-BUGS FIXED
-==========
-
- - When pressing enter on stage screen, start stage music gets triggered on every press.
- 
 CHANGES APPLIED
 ===============
 
- - Change bullet impact sound on shield.
+ - Pause game with start key also.

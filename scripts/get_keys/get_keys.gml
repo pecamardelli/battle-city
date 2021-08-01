@@ -17,8 +17,8 @@ function get_keys() {
 	if(!is_undefined(keys.keyboard.fire3)) fire3	= keyboard_check(keys.keyboard.fire3);
 	if(!is_undefined(keys.keyboard.fire4)) fire4	= keyboard_check(keys.keyboard.fire4);
 	
-	if(!is_undefined(keys.keyboard.start)) start	= keyboard_check(keys.keyboard.start);
-	if(!is_undefined(keys.keyboard.select)) select	= keyboard_check(keys.keyboard.select);
+	if(!is_undefined(keys.keyboard.start)) start	= keyboard_check_pressed(keys.keyboard.start);
+	if(!is_undefined(keys.keyboard.select)) select	= keyboard_check_pressed(keys.keyboard.select);
 	
 	if(!is_undefined(keys.keyboard.accel)) accel		= keyboard_check(keys.keyboard.accel);
 	if(!is_undefined(keys.keyboard.brake)) brake		= keyboard_check(keys.keyboard.brake);

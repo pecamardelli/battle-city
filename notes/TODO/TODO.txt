@@ -1,6 +1,7 @@
 FEATURES
 ========
 
+ - Back to main menu from battefield.
  - Save game feature.
  - Eagle mode optional.
  - Aim not dependent on vehicle direction (optional).

@@ -17,6 +17,6 @@ function get_pad_values(padIndex, keys) {
 	if (!is_undefined(keys.pad.accel))	 accel	 = gamepad_button_check(padIndex,keys.pad.accel);
 	if (!is_undefined(keys.pad.reverse)) reverse = gamepad_button_check(padIndex,keys.pad.reverse);
 	
-	if (!is_undefined(keys.pad.start))	start  = gamepad_button_check(padIndex,keys.pad.start);
-	if (!is_undefined(keys.pad.select)) select = gamepad_button_check(padIndex,keys.pad.select);
+	if (!is_undefined(keys.pad.start))	start  = gamepad_button_check_pressed(padIndex,keys.pad.start);
+	if (!is_undefined(keys.pad.select)) select = gamepad_button_check_pressed(padIndex,keys.pad.select);
 }

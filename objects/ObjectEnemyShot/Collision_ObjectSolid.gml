@@ -20,7 +20,7 @@ if (!exploding && creator != other.id) {
 			break;
 	}
 	
-	audio_play_sound_at(
+	soundId = audio_play_sound_at(
 		collisionSounds[irandom(array_length(collisionSounds)-1)],
 		x,
 		y,

@@ -9,7 +9,7 @@ if (!exploding) {
 	vspeed = 0;
 	exploding = true;
 	
-	audio_play_sound_at(
+	soundId = audio_play_sound_at(
 		SoundBulletOnShield,
 		x,
 		y,

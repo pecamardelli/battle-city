@@ -9,3 +9,5 @@ if (!is_undefined(caption) && currentWidth == width) {
 	draw_set_valign(fa_middle);
 	draw_text(captionX,captionY,caption);
 }
+
+if (!is_undefined(drawScript)) drawScript();

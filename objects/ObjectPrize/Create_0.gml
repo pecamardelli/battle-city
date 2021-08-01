@@ -1,5 +1,6 @@
 /// @description Insert description here
 
+enabled			= true;
 sprite_index	= SpriteButton;
 image_xscale	= 0;
 image_yscale	= 0;

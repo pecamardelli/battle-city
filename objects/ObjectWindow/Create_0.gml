@@ -17,6 +17,7 @@ playerKeySet	= undefined;
 image_alpha		= 0;
 
 stepAction = undefined;
+drawScript = undefined;
 
 
 

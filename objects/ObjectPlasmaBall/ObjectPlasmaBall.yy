@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "ObjectEntity",
+    "path": "objects/ObjectEntity/ObjectEntity.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -26,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "General",
-    "path": "folders/Objects/General.yy",
+    "name": "Misc",
+    "path": "folders/Objects/Entities/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectPlasmaBall",

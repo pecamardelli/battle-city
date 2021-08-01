@@ -1,6 +1,5 @@
 /// @description Insert description here
 
-enabled			= false;
 invulnerable	= true;
 material		= MATERIAL_METAL;
 image_xscale	= 0.3;

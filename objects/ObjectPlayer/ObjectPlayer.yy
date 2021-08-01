@@ -35,7 +35,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Players",
-    "path": "folders/Objects/Players.yy",
+    "path": "folders/Objects/Entities/Players.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectPlayer",

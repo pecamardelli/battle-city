@@ -8,3 +8,10 @@ CHANGES
  - Make steering smoother.							(X)
  - Make machine gun persistent between tanks.		(X)
  - Increase invulnerability time.					(X)
+ 
+VERSION 0.91 - Pause Feature Added 31/07/2021
+=============================================
+
+ - Pause feature added.
+ - Fixed multiple enter key pressing on stage screen that triggers start stage music.
+ - Change bullet impact sound on shield.

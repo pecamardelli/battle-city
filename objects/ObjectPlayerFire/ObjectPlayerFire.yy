@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "ObjectFire",
+    "path": "objects/ObjectFire/ObjectFire.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -22,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shots",
-    "path": "folders/Objects/Shots.yy",
+    "path": "folders/Objects/Entities/Shots.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectPlayerFire",

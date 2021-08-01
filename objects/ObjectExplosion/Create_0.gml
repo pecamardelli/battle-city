@@ -10,7 +10,7 @@ flames			= undefined;
 
 var explosionSounds = global.sounds.explosions.big;
 
-audio_play_sound_at(
+soundId = audio_play_sound_at(
 	explosionSounds[irandom(array_length(explosionSounds)-1)],
 	x,
 	y,

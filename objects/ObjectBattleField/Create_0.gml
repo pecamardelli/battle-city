@@ -14,4 +14,6 @@ image_index		= irandom(sprite_get_number(sprite_index)-1);
 image_alpha		= 0.3;
 image_blend		= c_grey;
 
+gamePaused		= false;
+pauseWindow		= undefined;
 customScript	= undefined;

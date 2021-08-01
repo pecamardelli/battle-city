@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shots",
-    "path": "folders/Objects/Shots.yy",
+    "path": "folders/Objects/Entities/Shots.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectPlayerMachineGunShot",

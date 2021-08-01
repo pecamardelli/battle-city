@@ -1,6 +1,5 @@
 /// @description Insert description here
 
-enabled			= false;
 invulnerable	= false;
 invisible		= false;
 material		= MATERIAL_METAL;

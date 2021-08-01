@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "ObjectEntity",
+    "path": "objects/ObjectEntity/ObjectEntity.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Environment",
-    "path": "folders/Objects/Environment.yy",
+    "path": "folders/Objects/Entities/Environment.yy",
   },
   "resourceVersion": "1.0",
   "name": "ObjectExplosion",

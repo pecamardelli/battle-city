@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "ObjectFire",
-    "path": "objects/ObjectFire/ObjectFire.yy",
+    "name": "ObjectEntity",
+    "path": "objects/ObjectEntity/ObjectEntity.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,7 +28,7 @@
     "path": "folders/Objects/Entities/Shots.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ObjectEnemyFire",
+  "name": "ObjectFire",
   "tags": [],
   "resourceType": "GMObject",
 }

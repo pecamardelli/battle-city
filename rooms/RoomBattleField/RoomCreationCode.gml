@@ -1,4 +1,4 @@
-var battleField = instance_create_depth(0,0,0,ObjectBattleField);
+instance_create_depth(0,0,0,ObjectBattleField);
 
 global.disableEnemies = false;
 cursor_sprite = -1;

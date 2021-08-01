@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Draw",
-    "path": "folders/Scripts/Gameplay/Draw.yy",
+    "name": "Gameplay",
+    "path": "folders/Scripts/Gameplay.yy",
   },
   "resourceVersion": "1.0",
-  "name": "draw_vehicle",
+  "name": "pause_functions",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -12,4 +12,6 @@ function ai_move_script(){
 		pointToGoDirection,
 		data.vehicle.turnSpeed * specMultiplier
 	);
+	
+	cannonDirection = approach(cannonDirection,direction,data.vehicle.turnSpeed * specMultiplier);
 }

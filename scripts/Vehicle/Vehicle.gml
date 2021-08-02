@@ -13,7 +13,8 @@ function Vehicle(
 	_engageMaxAngle,
 	_points,
 	_engineSound,
-	_stage
+	_stage,
+	_cannon
 ) constructor {
 	sprite			= _sprite;
 	speed			= _speed;
@@ -28,4 +29,5 @@ function Vehicle(
 	points			= _points;
 	engineSound		= _engineSound;
 	stage			= _stage;
+	cannon			= _cannon;
 }

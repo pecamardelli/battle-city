@@ -4,10 +4,14 @@ FEATURES
  - Save game feature.
  - Eagle mode optional.
  - Aim not dependent on vehicle direction (optional).
+ - Add autoaim prize (derived from aim feature).
  - Permit the selection of available tanks.
  - Create font from Cooltext's Epic Stone font and implement a function to draw text with it.
  - Replace standard text with Epic Stone graphical font.
  - Enemies can grab prizes (optional).
+ - Add jeeps and trucks to the battle.
+ - Add missiles.
+ - Add enemy friendly fire prize.
  
 ADDONS
 ======
@@ -15,10 +19,6 @@ ADDONS
  - Add more tanks.
  - Add more ambient objects.
  - Add more ground textures.
- - Add autoaim prize (derived from aim feature).
- - Add enemy friendly fire prize.
- - Add jeeps and trucks.
- - Add missiles.
  
 CHANGES
 =======
@@ -32,3 +32,5 @@ CHANGES
  
 BUGS
 ====
+
+ - After finishing a game, starting another one doesn't reset the level number.

@@ -46,7 +46,8 @@ function key_actions() {
 		if (shots < data.vehicle.maxBurst && (current_time - shotTimeStamp) >= data.vehicle.burstInterval) {
 			var stats = variable_struct_get(data, "stats");
 			if (!is_undefined(stats) && is_struct(stats)) stats.totalShots++;
-			var angle = direction + random_range(-1,1);
+			var angle = data.vehicle.cannon == -1 ? direction : cannonDirection;
+			angle += random_range(-1,1);
 			var shot = instance_create_depth(x,y,depth+1,shotObject);
 			shot.image_xscale	= data.vehicle.ammo.xScale;
 			shot.image_yscale	= data.vehicle.ammo.yScale;
@@ -67,7 +68,8 @@ function key_actions() {
 			with (ObjectPlayerMachineGunShot) if (creator == other.id) machineGunShots++;
 		
 			if (machineGunShots < machineGun.maxBurst && (current_time - machineGunShotTimeStamp) >= machineGun.burstInterval) {
-				var angle = direction + random_range(-1,1);
+				var angle = data.vehicle.cannon == -1 ? direction : cannonDirection;
+				angle += random_range(-1,1);
 				var machineGunShot = instance_create_depth(x,y,depth+1,ObjectPlayerMachineGunShot);
 				machineGunShot.x			= x - machineGunOffset * sin(image_angle*pi/180);
 				machineGunShot.y			= y - machineGunOffset * cos(image_angle*pi/180);

@@ -29,7 +29,7 @@ VERSION 0.92 - Back to main menu from battefield 01/08/2021
  - Added sounds to button clicks and window open.
  - Button's onClickAction now supports array of arguments.
  
-VERSION 0.92.1 - Fix several buds 01/08/2021
+VERSION 0.92.1 - Fix several bugs 01/08/2021
 ============================================
 
  - Stage number changes when pressing enter on stats screen.

@@ -8,7 +8,14 @@ function ai_engage_target(){
 	// This fixes that behaviour by virtually placing the player on a grater angle than the enemy.
 	while (direction - targetDirection > 180) targetDirection += 360;
 	
-	direction = approach(direction, targetDirection, data.vehicle.turnSpeed * specMultiplier);
+	if (data.vehicle.cannon == -1) {
+		direction = approach(direction, targetDirection, data.vehicle.turnSpeed * specMultiplier);
+		if (abs(angle_difference(direction, targetDirection)) < 10) fire1 = true;
+	}
+	else {
+		cannonDirection = approach(cannonDirection, targetDirection, data.vehicle.turnSpeed * specMultiplier);
+		if (abs(angle_difference(cannonDirection, targetDirection)) < 10) fire1 = true;
+	}
 	
-	if (abs(angle_difference(direction, targetDirection)) < 10) fire1 = true;
+	
 }

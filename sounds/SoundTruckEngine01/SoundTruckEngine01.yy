@@ -13,8 +13,8 @@
   "soundFile": "SoundTruckEngine01.wav",
   "duration": 2.678277,
   "parent": {
-    "name": "Trucks",
-    "path": "folders/Sounds/Vehicles/Trucks.yy",
+    "name": "Engines",
+    "path": "folders/Sounds/Vehicles/Trucks/Engines.yy",
   },
   "resourceVersion": "1.0",
   "name": "SoundTruckEngine01",

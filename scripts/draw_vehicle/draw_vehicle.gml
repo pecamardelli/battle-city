@@ -7,7 +7,7 @@ function draw_vehicle () {
 	
 		if (!is_undefined(data.machineGun)) {
 			draw_sprite_ext(
-				SpriteBulletCanon,
+				SpriteTankMachineGun,
 				0,
 				x - machineGunOffset * sin(image_angle*pi/180),
 				y - machineGunOffset * cos(image_angle*pi/180),
@@ -18,7 +18,7 @@ function draw_vehicle () {
 				image_alpha
 			);
 			draw_sprite_ext(
-				SpriteBulletCanon,
+				SpriteTankMachineGun,
 				0,
 				x + machineGunOffset * sin(image_angle*pi/180),
 				y + machineGunOffset * cos(image_angle*pi/180),
@@ -29,6 +29,8 @@ function draw_vehicle () {
 				image_alpha
 			);
 		}
+		
+		if (data.vehicle.cannon != -1) draw_sprite_ext(SpriteTankMachineGun,0,x,y,0.8,0.8,cannonDirection,c_white,image_alpha);
 	
 		draw_health_bar();
 	}

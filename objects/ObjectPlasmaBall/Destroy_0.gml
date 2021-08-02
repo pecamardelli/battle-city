@@ -5,4 +5,8 @@ if (!is_undefined(object)) {
 	object.enabled = true;
 }
 
-if (createScript == create_enemy && instance_exists(ObjectBattleField)) ObjectBattleField.vehicleNumber--;
+if (instance_exists(ObjectBattleField)) {
+	switch (createScript) {
+		case create_enemy: ObjectBattleField.tankNumber--; break;
+	}
+}

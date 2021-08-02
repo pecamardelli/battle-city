@@ -19,8 +19,9 @@ specMultiplier	= 1.3;
 _speed			= 0;
 shotTimeStamp	= 0;
 
-toDirection	= 0;
-shotObject	= ObjectPlayerShot;
+toDirection		= 0;
+cannonDirection	= undefined;
+shotObject		= ObjectPlayerShot;
 
 customScript = undefined;
 

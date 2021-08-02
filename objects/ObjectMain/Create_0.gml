@@ -175,17 +175,21 @@ global.ammo	= [
 	new Ammo(SpriteAmmo02,40,14,c_yellow,0.5,1,global.sounds.ammo.tank[3]),
 ];
 
+var machineGunAmmo = new Ammo(
+	SpriteAmmo01,
+	2,
+	10,
+	c_white,
+	0.2,
+	0.4,
+	global.sounds.ammo.machineGun[
+		irandom(array_length(global.sounds.ammo.machineGun)-1)
+	]
+);
+
 global.machineGuns = [
 	new MachineGun(
-		new Ammo(
-			SpriteAmmo01,
-			2,
-			15,
-			c_white,
-			0.2,
-			0.4,
-			global.sounds.ammo.machineGun[irandom(array_length(global.sounds.ammo.machineGun)-1)]
-		),
+		machineGunAmmo,
 		8,
 		180,
 		0,
@@ -194,12 +198,19 @@ global.machineGuns = [
 ];
 
 global.tanks = [
-	new Vehicle(SpriteTank01,2,0.1,1.9,global.ammo[0],1,300,50,400,90,100,SoundTankEngine01,0),
-	new Vehicle(SpriteTank02,2.2,0.15,2,global.ammo[1],2,250,70,420,105,400,SoundTankEngine02,0),
-	new Vehicle(SpriteTank03,1.9,0.09,1.6,global.ammo[2],5,350,150,460,120,2000,SoundTankEngine03,0),
-	new Vehicle(SpriteTank04,1.75,0.08,1.3,global.ammo[3],3,400,200,500,150,4000,SoundTankEngine04,0)
+	new Vehicle(SpriteTank01,2,0.1,1.9,global.ammo[0],1,300,50,400,90,100,SoundTankEngine01,0,-1),
+	new Vehicle(SpriteTank02,2.2,0.15,2,global.ammo[1],2,250,70,420,105,400,SoundTankEngine02,0,-1),
+	new Vehicle(SpriteTank03,1.9,0.09,1.6,global.ammo[2],5,350,150,460,120,2000,SoundTankEngine03,0,-1),
+	new Vehicle(SpriteTank04,1.75,0.08,1.3,global.ammo[3],3,400,200,500,150,4000,SoundTankEngine04,0,-1)
 ];
 
+global.trucks = [
+	new Vehicle(SpriteJeep01,3,0.2,1.9,machineGunAmmo,8,200,20,500,180,60,SoundJeepEngine01,0,SpriteTruckCannon),
+	new Vehicle(SpriteJeep02,3.1,0.21,1.91,machineGunAmmo,9,190,25,520,180,80,SoundJeepEngine01,0,SpriteTruckCannon),
+	new Vehicle(SpriteJeep03,3.2,0.22,1.95,machineGunAmmo,10,180,30,540,180,100,SoundJeepEngine01,0,SpriteTruckCannon),
+	new Vehicle(SpriteTruck01,2.8,0.2,1.9,machineGunAmmo,12,180,50,500,160,200,SoundTruckEngine01,0,SpriteTruckCannon),
+	new Vehicle(SpriteTruck02,2.8,0.4,1.9,machineGunAmmo,14,160,80,450,160,300,SoundTruckEngine02,0,SpriteTruckCannon),
+];
 
 global.player1.vehicleIndex = 3;
 global.player1.vehicle = json_parse(json_stringify(global.tanks[global.player1.vehicleIndex]));

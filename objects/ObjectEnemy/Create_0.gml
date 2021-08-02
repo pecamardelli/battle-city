@@ -19,6 +19,7 @@ keys			= undefined;
 _speed			= 0;
 shotTimeStamp	= 0;
 toDirection		= 0;
+cannonDirection	= direction;
 
 moveScript		= ai_move_script;
 

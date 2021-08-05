@@ -22,7 +22,9 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"hasPrize","path":"objects/ObjectEnemy/ObjectEnemy.yy",},"objectId":{"name":"ObjectEnemy","path":"objects/ObjectEnemy/ObjectEnemy.yy",},"value":"(random(100) <= PRIZE_PROBABILITY)","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Players",
     "path": "folders/Objects/Entities/Players.yy",

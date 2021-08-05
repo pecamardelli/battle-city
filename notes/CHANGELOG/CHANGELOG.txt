@@ -1,4 +1,4 @@
-BUGS FIXED
-==========
+FEATURES ADDED
+==============
 
- - Total player shots not counting properly.
+ - Add jeeps and trucks to the battle.

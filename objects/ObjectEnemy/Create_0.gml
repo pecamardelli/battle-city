@@ -30,9 +30,6 @@ shotObject		= ObjectEnemyShot;
 blendAmount		= 0;
 toBlendAmount	= 1;
 
-if (random(100) <= PRIZE_PROBABILITY) hasPrize = true;
-else hasPrize = false;
-
 lastX		= x;
 lastY		= y;
 pointToGo	= get_random_point();

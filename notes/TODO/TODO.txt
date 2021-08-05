@@ -9,7 +9,6 @@ FEATURES
  - Create font from Cooltext's Epic Stone font and implement a function to draw text with it.
  - Replace standard text with Epic Stone graphical font.
  - Enemies can grab prizes (optional).
- - Add jeeps and trucks to the battle.
  - Add missiles.
  - Add enemy friendly fire prize.
  

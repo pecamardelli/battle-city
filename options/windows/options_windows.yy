@@ -1,7 +1,7 @@
 {
   "option_windows_display_name": "Battle City Remake",
   "option_windows_executable_name": "${project_name}.exe",
-  "option_windows_version": "0.9.0.0",
+  "option_windows_version": "0.93.0.0",
   "option_windows_company_info": "Turdus Dev",
   "option_windows_product_info": "Battle City Remake",
   "option_windows_copyright_info": "2021",

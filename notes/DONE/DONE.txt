@@ -43,3 +43,8 @@ VERSION 0.92.2 - Little bug fix 01/08/2021
 
  - Total player shots not counting properly.
  
+VERSION 0.93 - Add jeeps and trucks 04/08/2021
+==============================================
+
+ - Add jeeps and trucks to the battle.
+ 
